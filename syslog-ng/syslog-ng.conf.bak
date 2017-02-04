@@ -1,0 +1,27 @@
+@version: 3.5
+
+options {
+    use_dns(no);
+    keep_hostname(yes);
+    chain_hostnames(yes);
+    log_msg_size(8196);
+    create_dirs(yes);
+    ts_format(iso);
+};
+
+source s_net_tcp {
+    udp(ip(0.0.0.0), port(514));
+};
+
+template Ekanite { template("<$PRI>1 $MSG"); template_escape(no); };
+
+
+destination d_file {
+    file("/var/log/vwms/${HOST}/${YEAR}_${MONTH}_${DAY}.log" create-dirs(yes) template(Ekanite));
+};
+
+log {
+    source(s_net_tcp);
+    destination(d_file);
+};
+

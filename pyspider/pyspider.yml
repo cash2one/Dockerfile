@@ -1,0 +1,16 @@
+mysql:
+  image: "mysql:5.6"
+  restart: always
+  environment:
+    - MYSQL_ROOT_PASSWORD=root
+  
+pyspider:
+  image: "zjqzero/pyspider:latest"
+  restart: always
+  container_name: "pyspider"
+  hostname: "pyspider"
+  links:
+    - mysql
+  ports:
+    - "5000:5000"
+  command: " --resultdb sqlalchemy+mysql+pymysql+resultdb://root:root@mysql/result?charset=utf8 --projectdb sqlalchemy+mysql+pymysql+projectdb://root:root@mysql/project?charset=utf8 --taskdb sqlalchemy+mysql+pymysql+taskdb://root:root@mysql/task?charset=utf8"

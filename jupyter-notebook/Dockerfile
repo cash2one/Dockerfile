@@ -2,6 +2,8 @@ FROM ubuntu:16.04
 
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
 ADD start.sh /start.sh
 ADD requirements2.txt /requirements2.txt
 ADD requirements3.txt /requirements3.txt

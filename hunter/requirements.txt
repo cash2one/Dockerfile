@@ -1,0 +1,16 @@
+apscheduler
+pymongo
+logbook
+flask-apscheduler
+raven
+flask_cors
+suds-jurko
+pandas
+numpy
+marshmallow
+mongoengine
+prometheus_client
+flask-cache
+mock
+redis
+hiredis

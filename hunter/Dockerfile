@@ -3,13 +3,13 @@ FROM python:3-alpine
 
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
-
-RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-
 ADD requirements.txt /home
 RUN apk update
-RUN apk add --no-cache supervisor \
+RUN apk add --no-cache tzdata \
+                       supervisor \
                        py-gunicorn
+
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 RUN pip install --no-cache-dir -r /home/requirements.txt
 RUN pip install --no-cache-dir uwsgi

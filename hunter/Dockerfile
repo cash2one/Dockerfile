@@ -1,20 +1,19 @@
 
-FROM python:3-alpine
+FROM ubuntu
 
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
-ADD requirements.txt /home
-RUN apk update
-RUN apk add --no-cache tzdata \
-                       supervisor \
-                       py-gunicorn
-
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+ADD requirements.txt /home
 
-RUN pip install --no-cache-dir -r /home/requirements.txt
-RUN pip install --no-cache-dir uwsgi
-RUN apk del python-dev libffi-dev build-base musl-dev linux-headers
-RUN rm -rf /var/cache/apk/* 
+RUN apt update
+RUN apt install -y python3-dev \
+                   python3-pip
+
+RUN pip3 install --no-cache-dir -r /home/requirements.txt
+RUN pip3 install --no-cache-dir uwsgi, gunicorn
+
+RUN rm -rf /var/lib/apt/lists/*
 RUN rm -rf /tmp/*
 
 EXPOSE 5000 5001

@@ -18,4 +18,4 @@ RUN rm -rf /tmp/*
 
 EXPOSE 5000 5001
 
-
+CMD ["/var/hunter/run.sh"]

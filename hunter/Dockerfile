@@ -26,4 +26,4 @@ RUN rm -rf /tmp/*
 
 EXPOSE 5000 5001
 
-CMD ["python3 /var/hunter/run.py"]
+CMD ["python3", "/var/hunter/run.py"]

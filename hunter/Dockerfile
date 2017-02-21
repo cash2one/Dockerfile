@@ -17,6 +17,10 @@ RUN pip3 install --no-cache-dir uwsgi
 RUN rm -rf /var/lib/apt/lists/*
 RUN rm -rf /tmp/*
 
+ADD Emquant /home/lib
+RUN cp /home/lib/Emquant/Linux_3/libs/x64/libjson.so /usr/lib
+RUN python /home/lib/Emquant/Linux_3/installEmQuantAPI_Ex.py
+
 EXPOSE 5000 5001
 
 CMD ["/usr/bin/uwsgi --ini  /etc/uwsgi.ini"]

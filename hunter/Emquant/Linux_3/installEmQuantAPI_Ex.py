@@ -21,7 +21,7 @@ def installEmQuantAPI():
 
     #get site-packages path
     osname = platform.uname()[0].lower()
-    site_pkg_name = "site-packages"
+    site_pkg_name = "dist-packages"
     
     packagepath = "."
     for x in sys.path:

@@ -26,4 +26,4 @@ WORKDIR /var/hunter
 
 EXPOSE 5000 5001
 
-CMD ["/usr/bin/uwsgi", "--ini", "/etc/uwsgi.ini"]
+CMD ["/usr/local/bin/uwsgi", "--ini", "/etc/uwsgi.ini"]

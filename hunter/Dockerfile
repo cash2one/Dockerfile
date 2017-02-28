@@ -22,7 +22,7 @@ RUN python3 /home/lib/Emquant/Linux_3/installEmQuantAPI_Ex.py
 RUN rm -rf /var/lib/apt/lists/*
 RUN rm -rf /tmp/*
 
-
+WORKDIR /var/hunter
 
 EXPOSE 5000 5001
 

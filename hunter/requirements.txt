@@ -1,3 +1,4 @@
+requests
 apscheduler
 pymongo
 logbook
@@ -10,7 +11,9 @@ numpy
 marshmallow
 mongoengine
 prometheus_client
-flask-cache
+flask-caching
 mock
 redis
 hiredis
+celery
+aiohttp

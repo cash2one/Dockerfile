@@ -26,4 +26,4 @@ WORKDIR /var/hunter
 
 EXPOSE 5000 5001
 
-CMD ["python3", "/var/hunter/run.py"]
+CMD ["/usr/bin/uwsgi", "--ini", "/etc/uwsgi.ini"]

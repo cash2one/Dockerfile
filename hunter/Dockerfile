@@ -6,7 +6,7 @@ MAINTAINER zhoujunqian <zjqzero@gmail.com>
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ADD requirements.txt /home
 ADD uwsgi.ini /etc/uwsgi.ini
-ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+ADD supervisord.conf /etc/supervisord.conf
 
 RUN apt update
 RUN apt install -y python3-dev \
@@ -30,4 +30,4 @@ WORKDIR /var/hunter
 
 EXPOSE 5000 5001
 
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/local/bin/supervisord"]

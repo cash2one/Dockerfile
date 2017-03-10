@@ -11,7 +11,7 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 RUN apt update
 RUN apt install -y python3-dev \
                    python3-pip \
-                   python3-pip
+                   python-pip
 
 RUN pip install --no-cache-dir supervisor
 

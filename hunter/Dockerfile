@@ -6,10 +6,14 @@ MAINTAINER zhoujunqian <zjqzero@gmail.com>
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ADD requirements.txt /home
 ADD uwsgi.ini /etc/uwsgi.ini
+ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 RUN apt update
 RUN apt install -y python3-dev \
+                   python3-pip \
                    python3-pip
+
+RUN pip install --no-cache-dir supervisor
 
 RUN pip3 install --no-cache-dir -r /home/requirements.txt
 RUN pip3 install --no-cache-dir uwsgi
@@ -26,4 +30,4 @@ WORKDIR /var/hunter
 
 EXPOSE 5000 5001
 
-CMD ["/usr/local/bin/uwsgi", "--ini", "/etc/uwsgi.ini"]
+CMD ["/usr/bin/supervisord"]

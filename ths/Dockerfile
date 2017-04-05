@@ -8,7 +8,8 @@ RUN ldd /ths_lib/bin64/libFTDataInterface.so
 RUN apt update
 RUN apt install -y python3 \
                    python3-dev \
-                   python3-pip
+                   python3-pip \
+                   libidn11
 RUN python3 /ths_lib/bin64/installiFinDPy.py /ths_lib
 
 CMD python3 /var/app/run.py

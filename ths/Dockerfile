@@ -3,8 +3,8 @@ FROM ubuntu:16.04
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
 ADD ./bin64 /ths_lib/bin64
-RUN ldd /ths_lib/libShellExport.so
-RUN ldd /ths_lib/libFTDataInterface.so
+RUN ldd /ths_lib/bin64/libShellExport.so
+RUN ldd /ths_lib/bin64/libFTDataInterface.so
 RUN apt update
 RUN apt install -y python3 \
                    python3-dev \

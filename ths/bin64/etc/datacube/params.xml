@@ -1,0 +1,2275 @@
+<?xml version="1.0" encoding="gbk"?>
+<params>
+	<param name="P00001" datatype="dt_string" default="最新">
+		<item name="最新" value="100" formula="thsiFinD(&quot;THS_TRADEDATE&quot;,thscode,NOW(),0)"/>
+	</param>
+	<param name="P00002" datatype="dt_string" default="最新">
+		<item name="最新" value="100"/>
+	</param>
+	<param name="P00003" datatype="dt_string" default="最新">
+		<item name="最新" value="100" formula="thsiFinD(&quot;THS_TRADEDATE&quot;,thscode,NOW(),0)"/>
+		<item name="前一交易日" value="101" formula="thsiFinD(&quot;THS_TRADEDATE&quot;,thscode,NOW(),-1)"/>
+		<item name="1周前" value="102" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-1,&quot;W&quot;,0)"/>
+		<item name="1月前" value="103" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-1,&quot;M&quot;,0)"/>
+		<item name="3月前" value="104" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-3,&quot;M&quot;,0)"/>
+		<item name="6月前" value="105" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-6,&quot;M&quot;,0)"/>
+		<item name="1年前" value="106" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-1,&quot;Y&quot;,0)"/>
+		<item name="2年前" value="107" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-2,&quot;Y&quot;,0)"/>
+		<item name="本年初" value="108" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),0,&quot;Y&quot;,1)"/>
+		<item name="本月初" value="109" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),0,&quot;M&quot;,1)"/>
+		<item name="本周一" value="110" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),0,&quot;W&quot;,1)"/>
+		<item name="上市首日" value="111" formula="thsiFinD(&quot;THS_SFSSRQ_STOCK&quot;,thscode)"/>
+	</param>
+	<param name="P00004" datatype="dt_string" default="最新">
+		<item name="最新" value="100" formula="thsiFinD(&quot;THS_TRADEDATE&quot;,thscode,NOW(),0)"/>
+		<item name="前一交易日" value="101" formula="thsiFinD(&quot;THS_TRADEDATE&quot;,thscode,NOW(),-1)"/>
+		<item name="1周前" value="102" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-1,&quot;W&quot;,0)"/>
+		<item name="1月前" value="103" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-1,&quot;M&quot;,0)"/>
+		<item name="3月前" value="104" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-3,&quot;M&quot;,0)"/>
+		<item name="6月前" value="105" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-6,&quot;M&quot;,0)"/>
+		<item name="1年前" value="106" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-1,&quot;Y&quot;,0)"/>
+		<item name="2年前" value="107" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-2,&quot;Y&quot;,0)"/>
+		<item name="本年初" value="108" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),0,&quot;Y&quot;,1)"/>
+		<item name="本月初" value="109" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),0,&quot;M&quot;,1)"/>
+		<item name="本周一" value="110" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),0,&quot;W&quot;,1)"/>
+	</param>
+	<param name="P00005" datatype="dt_string" default="最新">
+		<item name="最新" value="100"/>
+		<item name="前一交易日" value="101"/>
+		<item name="1周前" value="102"/>
+		<item name="1月前" value="103"/>
+		<item name="3月前" value="104"/>
+		<item name="6月前" value="105"/>
+		<item name="1年前" value="106"/>
+		<item name="2年前" value="107"/>
+		<item name="本年初" value="108"/>
+		<item name="本月初" value="109"/>
+		<item name="本周一" value="110"/>
+		<item name="上市首日" value="111"/>
+	</param>
+	<param name="P00006" datatype="dt_string" default="最新">
+		<item name="最新" value="100"/>
+		<item name="前一月" value="101"/>
+		<item name="前两月" value="102"/>
+		<item name="前三月" value="103"/>
+		<item name="前五月" value="104"/>
+	</param>
+	<param name="P00007" datatype="dt_string" default="最新一期(MRQ)">
+		<item name="去年年报" value="100" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,-1,4)"/>
+		<item name="今年一季" value="101" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,0,1)"/>
+		<item name="今年中报" value="102" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,0,2)"/>
+		<item name="今年三季" value="103" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,0,3)"/>
+		<item name="最新一期(MRQ)" value="104" formula="thsiFinD(&quot;THS_CALCULATELASTREPORT&quot;,thscode ,NOW())"/>
+		<item name="去年一季" value="105" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,-1,1)"/>
+		<item name="去年中报" value="106" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,-1,2)"/>
+		<item name="去年三季" value="107" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,-1,3)"/>
+	</param>
+	<param name="P00008" datatype="dt_string" default="去年年报">
+		<item name="去年年报" value="100"/>
+		<item name="今年一季" value="101"/>
+		<item name="今年中报" value="102"/>
+		<item name="今年三季" value="103"/>
+		<item name="去年一季" value="104"/>
+		<item name="去年中报" value="105"/>
+		<item name="去年三季" value="106"/>
+	</param>
+	<param name="P00009" datatype="dt_string" default="最新">
+		<item name="最新" value="100" formula="thsiFinD(&quot;THS_TRADEDATE&quot;,thscode,NOW(),0)"/>
+		<item name="前一交易日" value="110" formula="thsiFinD(&quot;THS_TRADEDATE&quot;,thscode,NOW(),-1)"/>
+		<item name="上周末" value="102" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-1,&quot;W&quot;,2)"/>
+		<item name="上月末" value="103" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-1,&quot;M&quot;,2)"/>
+		<item name="上年末" value="104" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-1,&quot;Y&quot;,2)"/>
+		<item name="上半年末" value="105" formula="thsiFinD(&quot;THS_CALCULATEYEAR&quot;,NOW(),1,2)"/>
+	</param>
+	<param name="P00010" datatype="dt_string" default="最新">
+		<item name="最新" value="100"/>
+		<item name="前一交易日" value="110"/>
+		<item name="上周末" value="102"/>
+		<item name="上月末" value="103"/>
+		<item name="上年末" value="104"/>
+		<item name="上半年末" value="105"/>
+	</param>
+	<param name="P00011" datatype="dt_string" default="截止日52周前">
+		<item name="截止日前一交易日" value="100" formula="thsiFinD(&quot;THS_TRADEDATE&quot;,thscode,enddate,-1)"/>
+		<item name="截止日1周前" value="101" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,deadline,-1,&quot;W&quot;,0)"/>
+		<item name="截止日2周前" value="102" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,deadline,-2,&quot;W&quot;,0)"/>
+		<item name="截止日52周前" value="103" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,deadline,-52,&quot;W&quot;,0)"/>
+		<item name="截止日1月前" value="104" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,deadline,-1,&quot;M&quot;,0)"/>
+		<item name="截止日3月前" value="105" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,deadline,-3,&quot;M&quot;,0)"/>
+		<item name="截止日6月前" value="106" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,deadline,-6,&quot;M&quot;,0)"/>
+		<item name="截止日1年前" value="107" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,deadline,-1,&quot;Y&quot;,0)"/>
+		<item name="截止日3年前" value="108" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,deadline,-3,&quot;Y&quot;,0)"/>
+		<item name="本年初" value="109" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),0,&quot;Y&quot;,1)"/>
+		<item name="本月初" value="110" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),0,&quot;M&quot;,1)"/>
+		<item name="本周一" value="111" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),0,&quot;W&quot;,1)"/>
+		<item name="下半年初" value="112" formula="thsiFinD(&quot;THS_CALCULATEYEAR&quot;,NOW(),2,1) "/>
+		<item name="上市首日" value="113" formula="thsiFinD(&quot;THS_SFSSRQ_STOCK&quot;,thscode)"/>
+	</param>
+	<param name="P00012" datatype="dt_string" default="截止日52周前">
+		<item name="截止日前一交易日" value="100"/>
+		<item name="截止日1周前" value="101"/>
+		<item name="截止日2周前" value="102"/>
+		<item name="截止日52周前" value="103"/>
+		<item name="截止日1月前" value="104"/>
+		<item name="截止日3月前" value="105"/>
+		<item name="截止日6月前" value="106"/>
+		<item name="截止日1年前" value="107"/>
+		<item name="截止日3年前" value="108"/>
+		<item name="本年初" value="109"/>
+		<item name="本月初" value="110"/>
+		<item name="本周一" value="111"/>
+		<item name="下半年初" value="113"/>
+	</param>
+	<param name="P00013" datatype="dt_integer">
+		<item name="上年年报增长率" value="100"/>
+		<item name="上年1季*4较上上年年报增长率" value="101"/>
+		<item name="上年中报*2较上上年年报增长率" value="102"/>
+		<item name="上年3季*4/3较上上年年报增长率" value="103"/>
+		<item name="当年年报增长率" value="104"/>
+		<item name="当年1季*4较上年年报增长率" value="105"/>
+		<item name="当年中报*2较上年年报增长率" value="106"/>
+		<item name="当年3季*4/3较上年年报增长率" value="107"/>
+	</param>
+	<param name="P00014" datatype="dt_integer">
+		<item name="ADTM" value="100"/>
+		<item name="MAADTM" value="101"/>
+	</param>
+	<param name="P00015" datatype="dt_integer">
+		<item name="AR" value="100"/>
+		<item name="BR" value="101"/>
+	</param>
+	<param name="P00016" datatype="dt_integer">
+		<item name="TR" value="100"/>
+		<item name="ATR" value="101"/>
+	</param>
+	<param name="P00018" datatype="dt_integer">
+		<item name="BBIBOLL" value="100"/>
+		<item name="UPR" value="101"/>
+		<item name="DWN" value="102"/>
+	</param>
+	<param name="P00019" datatype="dt_integer">
+		<item name="MID" value="100"/>
+		<item name="UPPER" value="101"/>
+		<item name="LOWER" value="102"/>
+	</param>
+	<param name="P00020" datatype="dt_integer">
+		<item name="CDP" value="100"/>
+		<item name="AH" value="101"/>
+		<item name="AL" value="102"/>
+		<item name="NH" value="103"/>
+		<item name="NL" value="104"/>
+	</param>
+	<param name="P00022" datatype="dt_integer">
+		<item name="DBCD" value="100"/>
+		<item name="MM" value="101"/>
+	</param>
+	<param name="P00023" datatype="dt_integer">
+		<item name="DDI" value="100"/>
+		<item name="ADDI" value="101"/>
+		<item name="AD" value="102"/>
+	</param>
+	<param name="P00024" datatype="dt_integer">
+		<item name="DDD" value="100"/>
+		<item name="AMA" value="101"/>
+	</param>
+	<param name="P00026" datatype="dt_integer">
+		<item name="DPO" value="100"/>
+		<item name="MADPO" value="101"/>
+	</param>
+	<param name="P00027" datatype="dt_integer">
+		<item name="不调整" value="100"/>
+		<item name="剔除负值" value="101"/>
+	</param>
+	<param name="P00028" datatype="dt_integer">
+		<item name="不调整" value="100"/>
+		<item name="剔除负值" value="101"/>
+		<item name="剔除负值或数值大于1000的股票" value="106"/>
+		<item name="剔除负值或数值大于500的股票" value="105"/>
+	</param>
+	<param name="P00029" datatype="dt_integer">
+		<item name="不调整" value="100"/>
+		<item name="剔除负值" value="101"/>
+		<item name="剔除负值和数值大于100的股票" value="104"/>
+		<item name="剔除负值和数值大于50的股票" value="103"/>
+	</param>
+	<param name="P00030" datatype="dt_integer">
+		<item name="不调整" value="100"/>
+		<item name="剔除负值" value="101"/>
+		<item name="剔除负值或数值大于50的股票" value="103"/>
+		<item name="剔除负值或数值大于25的股票" value="102"/>
+	</param>
+	<param name="P00031" datatype="dt_integer">
+		<item name="UPPER" value="101"/>
+		<item name="LOWER" value="100"/>
+	</param>
+	<param name="P00032" datatype="dt_integer">
+		<item name="前年年报" value="100"/>
+		<item name="上年年报" value="101"/>
+		<item name="当年一季×4" value="102"/>
+		<item name="当年中报×2" value="103"/>
+		<item name="当年三季×4/3" value="104"/>
+		<item name="当年年报" value="105"/>
+		<item name="最新年报(LYR)" value="106"/>
+		<item name="前推12个月(TTM)" value="107"/>
+		<item name="上年三季×4/3" value="109"/>
+	</param>
+	<param name="P00033" datatype="dt_integer">
+		<item name="前年年报" value="100" formula="102"/>
+		<item name="上年三季" value="109" formula="109"/>
+		<item name="上年年报" value="101" formula="103"/>
+		<item name="当年一季" value="102" formula="104"/>
+		<item name="当年中报" value="103" formula="105"/>
+		<item name="当年三季" value="104" formula="107"/>
+		<item name="当年年报" value="105" formula="108"/>
+		<item name="最新年报(LYR)" value="107" formula="100"/>
+		<item name="最新报告期(MRQ)" value="108" formula="101"/>
+	</param>
+	<param name="P00035" datatype="dt_integer">
+		<item name="前年年报" value="100" formula="100"/>
+		<item name="上年年报" value="101" formula="101"/>
+		<item name="当年一季×4" value="102" formula="102"/>
+		<item name="当年中报×2" value="103" formula="103"/>
+		<item name="当年三季×4/3" value="104" formula="104"/>
+		<item name="当年年报" value="105" formula="106"/>
+		<item name="最新年报(LYR)" value="106" formula="107"/>
+		<item name="上年三季×4/3" value="107" formula="110"/>
+		<item name="上年中报×2" value="109" formula="109"/>
+		<item name="最新报告期(MRQ)" value="108" formula="105"/>
+	</param>
+	<param name="P00037" datatype="dt_integer">
+		<item name="前年年报" value="100"/>
+		<item name="上年年报" value="101"/>
+		<item name="当年一季×4" value="102"/>
+		<item name="当年中报×2" value="103"/>
+		<item name="当年三季×4/3" value="104"/>
+		<item name="当年年报" value="105"/>
+		<item name="最新年报(LYR)" value="106"/>
+		<item name="上年三季×4/3" value="107"/>
+		<item name="上年中报×2" value="108"/>
+	</param>
+	<param name="P00038" datatype="dt_integer">
+		<item name="上证指数" value="100"/>
+		<item name="上证180" value="101"/>
+		<item name="深证成指" value="102"/>
+		<item name="深证100" value="103"/>
+		<item name="沪深300" value="104"/>
+	</param>
+	<param name="P00039" datatype="dt_integer">
+		<item name="K" value="100"/>
+		<item name="D" value="101"/>
+		<item name="J" value="102"/>
+	</param>
+	<param name="P00040" datatype="dt_integer">
+		<item name="LWR1" value="100"/>
+		<item name="LWR2" value="101"/>
+	</param>
+	<param name="P00041" datatype="dt_integer">
+		<item name="DIFF" value="100"/>
+		<item name="DEA" value="101"/>
+		<item name="MACD" value="102"/>
+	</param>
+	<param name="P00042" datatype="dt_integer">
+		<item name="A" value="100"/>
+		<item name="MI" value="101"/>
+	</param>
+	<param name="P00043" datatype="dt_integer">
+		<item name="DIF" value="100"/>
+		<item name="MICD" value="101"/>
+	</param>
+	<param name="P00044" datatype="dt_integer">
+		<item name="WR" value="100"/>
+		<item name="MR" value="101"/>
+		<item name="SR" value="102"/>
+		<item name="WS" value="103"/>
+		<item name="MS" value="104"/>
+		<item name="SS" value="105"/>
+	</param>
+	<param name="P00045" datatype="dt_integer">
+		<item name="MTM" value="101"/>
+		<item name="MAMTM" value="100"/>
+	</param>
+	<param name="P00046" datatype="dt_integer">
+		<item name="DIF" value="100"/>
+		<item name="RCCD" value="101"/>
+	</param>
+	<param name="P00047" datatype="dt_integer">
+		<item name="ROC" value="100"/>
+		<item name="ROCMA" value="101"/>
+	</param>
+	<param name="P00049" datatype="dt_integer">
+		<item name="SRDM" value="101"/>
+		<item name="ASRDM" value="100"/>
+	</param>
+	<param name="P00050" datatype="dt_integer">
+		<item name="TAPI" value="101"/>
+		<item name="MATAPI" value="100"/>
+	</param>
+	<param name="P00051" datatype="dt_integer">
+		<item name="TRIX" value="100"/>
+		<item name="TRMA" value="101"/>
+	</param>
+	<param name="P00052" datatype="dt_integer">
+		<item name="VROC" value="101"/>
+		<item name="MAVROC" value="100"/>
+	</param>
+	<param name="P00053" datatype="dt_integer">
+		<item name="B" value="100"/>
+		<item name="D" value="101"/>
+	</param>
+	<param name="P00054" datatype="dt_integer">
+		<item name="合并报表" value="100"/>
+		<item name="母公司报表" value="101"/>
+		<item name="合并报表(调整)" value="102"/>
+		<item name="母公司报表(调整)" value="103"/>
+	</param>
+	<param name="P00055" datatype="dt_integer">
+		<item name="合并报表" value="100"/>
+		<item name="母公司报表" value="101"/>
+		<item name="合并报表(调整)" value="102"/>
+		<item name="母公司报表(调整)" value="103"/>
+	</param>
+	<param name="P00056" datatype="dt_integer">
+		<item name="2017" value="2017"/>
+		<item name="2016" value="2016"/>
+		<item name="2015" value="2015"/>
+		<item name="2014" value="2014"/>
+		<item name="2013" value="2013"/>
+		<item name="2012" value="2012"/>
+		<item name="2011" value="2011"/>
+		<item name="2010" value="2010"/>
+		<item name="2009" value="2009"/>
+		<item name="2008" value="2008"/>
+		<item name="2007" value="2007"/>
+		<item name="2006" value="2006"/>
+		<item name="2005" value="2005"/>
+		<item name="2004" value="2004"/>
+		<item name="2003" value="2003"/>
+		<item name="2002" value="2002"/>
+		<item name="2001" value="2001"/>
+		<item name="2000" value="2000"/>
+		<item name="1999" value="1999"/>
+		<item name="1998" value="1998"/>
+		<item name="1997" value="1997"/>
+		<item name="1996" value="1996"/>
+		<item name="1995" value="1995"/>
+		<item name="1994" value="1994"/>
+		<item name="1993" value="1993"/>
+		<item name="1992" value="1992"/>
+		<item name="1991" value="1991"/>
+		<item name="1990" value="1990"/>
+		<item name="1989" value="1989"/>
+	</param>
+	<param name="P00058" datatype="dt_integer">
+		<item name="过去1个月" value="1"/>
+		<item name="过去3个月" value="3"/>
+		<item name="过去6个月" value="6"/>
+		<item name="过去1年" value="12"/>
+		<item name="过去3年" value="36"/>
+		<item name="自基金成立起至今" value="0"/>
+	</param>
+	<param name="P00059" datatype="dt_string">
+		<item name="原始币种" value="OC"/>
+		<item name="人民币" value="CNY"/>
+		<item name="美元" value="USD"/>
+		<item name="港元" value="HKD"/>
+	</param>
+	<param name="P00060" datatype="dt_string">
+		<item name="上证综合指数" value="000001.SH"/>
+		<item name="上证50指数" value="000016.SH"/>
+		<item name="上证180指数" value="000010.SH"/>
+		<item name="深圳成份指数" value="399001.SZ"/>
+		<item name="深圳综合指数" value="399106.SZ"/>
+		<item name="中证100指数" value="399903.SZ"/>
+		<item name="沪深300指数" value="000300.SH"/>
+		<item name="MSCI CHINA A指数" value="133333.MI"/>
+	</param>
+	<param name="P00062" datatype="dt_integer">
+		<item name="前10名" value="0"/>
+		<item name="第1名" value="1"/>
+		<item name="第2名" value="2"/>
+		<item name="第3名" value="3"/>
+		<item name="第4名" value="4"/>
+		<item name="第5名" value="5"/>
+		<item name="第6名" value="6"/>
+		<item name="第7名" value="7"/>
+		<item name="第8名" value="8"/>
+		<item name="第9名" value="9"/>
+		<item name="第10名" value="10"/>
+	</param>
+	<param name="P00063" datatype="dt_integer">
+		<item name="第1名" value="1"/>
+		<item name="第2名" value="2"/>
+		<item name="第3名" value="3"/>
+		<item name="第4名" value="4"/>
+		<item name="第5名" value="5"/>
+		<item name="第6名" value="6"/>
+		<item name="第7名" value="7"/>
+		<item name="第8名" value="8"/>
+		<item name="第9名" value="9"/>
+		<item name="第10名" value="10"/>
+	</param>
+	<param name="P00064" datatype="dt_integer" default="第四季度">
+		<item name="第一季度" value="100"/>
+		<item name="第二季度" value="101"/>
+		<item name="第三季度" value="102"/>
+		<item name="第四季度" value="103"/>
+	</param>
+	<param name="P00069" datatype="dt_integer">
+		<item name="调整前" value="100"/>
+		<item name="调整后" value="101"/>
+	</param>
+	<param name="P00071" datatype="dt_integer">
+		<item name="不复权" value="100"/>
+		<item name="后复权" value="101"/>
+	</param>
+	<param name="P00072" datatype="dt_integer">
+		<item name="不复权" value="100"/>
+		<item name="后复权" value="101"/>
+		<item name="前复权" value="102"/>
+	</param>
+	<param name="P00073" datatype="dt_integer">
+		<item name="流通股本" value="100"/>
+		<item name="总股本" value="101"/>
+	</param>
+	<param name="P00081" datatype="dt_integer">
+		<item name="中报" value="100"/>
+		<item name="年报" value="101"/>
+	</param>
+	<param name="P00082" datatype="dt_string">
+		<item name="上证指数" value="000001.SH"/>
+		<item name="上证50指数" value="000016.SH"/>
+		<item name="上证180指数" value="000010.SH"/>
+		<item name="深证成指" value="399001.SZ"/>
+		<item name="深证综合指数" value="399106.SZ"/>
+		<item name="中证100指数" value="000903.SH"/>
+		<item name="沪深300指数" value="399300.SZ"/>
+		<item name="恒生指数" value="HSI.HI"/>
+		<item name="国企指数" value="HSCEI.HI"/>
+		<item name="红筹指数" value="HSCC.HI"/>
+		<item name="纳斯达克综合指数" value="IXIC.GI"/>
+	</param>
+	<param name="P00083" datatype="dt_string">
+		<item name="上证指数" value="000001.SH"/>
+		<item name="深证成指" value="399001.SZ"/>
+		<item name="恒生指数" value="HSI.HI"/>
+		<item name="恒生中国企业指数" value="HSCEI.HI"/>
+		<item name="恒生香港中资企业指数" value="HSCCI.HI"/>
+		<item name="纳斯达克综合指数" value="IXIC.GI"/>
+	</param>
+	<param name="P00084" datatype="dt_integer">
+		<item name="第一季度" value="100"/>
+		<item name="第二季度" value="101"/>
+		<item name="第三季度" value="102"/>
+		<item name="第四季度" value="103"/>
+	</param>
+	<param name="P00085" datatype="dt_integer">
+		<item name="中报" value="101"/>
+		<item name="年报" value="100"/>
+	</param>
+	<param name="P00086" datatype="dt_integer">
+		<item name="股票价差收入" value="200"/>
+		<item name="债券价差收入" value="201"/>
+		<item name="买入返售证券收入" value="202"/>
+		<item name="股利收入" value="203"/>
+		<item name="债券利息收入" value="204"/>
+		<item name="存款利息收入" value="205"/>
+		<item name="发行(扩募)费用结余收入" value="206"/>
+		<item name="申购冻结利息收入" value="207"/>
+		<item name="其他收入" value="208"/>
+		<item name="收入合计" value="209"/>
+		<item name="基金管理费" value="210"/>
+		<item name="基金托管费" value="211"/>
+		<item name="卖出回购证券支出" value="212"/>
+		<item name="回购交易费用" value="213"/>
+		<item name="回购利息支出" value="214"/>
+		<item name="基金销售服务费" value="215"/>
+		<item name="上市年费" value="216"/>
+		<item name="信息披露费" value="217"/>
+		<item name="审计费用" value="218"/>
+		<item name="律师费" value="219"/>
+		<item name="分红手续费" value="220"/>
+		<item name="费用合计" value="221"/>
+		<item name="基金净收益" value="222"/>
+		<item name="未实现利得" value="223"/>
+		<item name="基金经营业绩" value="224"/>
+		<item name="客户维护费" value="225"/>
+		<item name="股票投资公允价值变动收益" value="226"/>
+		<item name="债券投资公允价值变动收益" value="227"/>
+		<item name="权证投资公允价值变动收益" value="228"/>
+		<item name="基金投资公允价值变动收益" value="229"/>
+		<item name="资产支持证券投资公允价值变动收益" value="230"/>
+	</param>
+	<param name="P00087" datatype="dt_integer">
+		<item name="期初基金净值" value="100"/>
+		<item name="以前年度损益调整" value="101"/>
+		<item name="调整后期初基金净值" value="102"/>
+		<item name="本期基金净收益" value="103"/>
+		<item name="本期未实现利得" value="104"/>
+		<item name="本期经营活动产生的基金净值变动数" value="105"/>
+		<item name="本期基金申购款" value="106"/>
+		<item name="本期基金赎回款" value="107"/>
+		<item name="本期基金单位交易产生的基金净值变动数" value="108"/>
+		<item name="本期向基金持有人分配收益产生的基金净值变动数" value="109"/>
+		<item name="期末基金净值" value="110"/>
+	</param>
+	<param name="P00088" datatype="dt_integer">
+		<item name="本期基金净收益" value="100"/>
+		<item name="期初基金净收益" value="101"/>
+		<item name="以前年度损益调整" value="102"/>
+		<item name="本期申购基金单位的损益平准金(开放式)" value="103"/>
+		<item name="本期赎回基金单位的损益平准金(开放式)" value="104"/>
+		<item name="本期损益平准金" value="105"/>
+		<item name="可供分配基金净收益" value="106"/>
+		<item name="本期已分配基金净收益" value="107"/>
+		<item name="期末基金净收益" value="108"/>
+	</param>
+	<param name="P00089" datatype="dt_integer">
+		<item name="银行存款" value="100"/>
+		<item name="清算备付金" value="101"/>
+		<item name="交易保证金" value="102"/>
+		<item name="股票投资市值" value="103"/>
+		<item name="股票投资成本" value="104"/>
+		<item name="股票投资估值增值" value="105"/>
+		<item name="债券投资市值" value="106"/>
+		<item name="债券投资成本" value="107"/>
+		<item name="债券投资估值增值" value="108"/>
+		<item name="应收证券交易清算款" value="109"/>
+		<item name="应收股利" value="110"/>
+		<item name="应收利息" value="111"/>
+		<item name="应收账款" value="112"/>
+		<item name="应收申购款" value="113"/>
+		<item name="其他应收款项" value="114"/>
+		<item name="待摊费用" value="115"/>
+		<item name="买入返售金融资产" value="116"/>
+		<item name="其他资产" value="117"/>
+		<item name="基金资产总计" value="118"/>
+		<item name="应付基金管理费" value="119"/>
+		<item name="应付基金托管费" value="120"/>
+		<item name="应付交易清算款" value="121"/>
+		<item name="应付账款" value="122"/>
+		<item name="应付佣金" value="123"/>
+		<item name="其他应付款项" value="124"/>
+		<item name="应付赎回款" value="125"/>
+		<item name="应付赎回费" value="126"/>
+		<item name="卖出回购证券款" value="127"/>
+		<item name="应付利息" value="128"/>
+		<item name="应付收益" value="129"/>
+		<item name="预提费用" value="130"/>
+		<item name="其他负债" value="131"/>
+		<item name="负债合计" value="132"/>
+		<item name="实收基金" value="133"/>
+		<item name="未实现利得" value="134"/>
+		<item name="未分配净收益" value="135"/>
+		<item name="未实现估值增值" value="136"/>
+		<item name="持有人权益合计(基金资产净值)" value="137"/>
+		<item name="负债及持有人权益合计" value="138"/>
+	</param>
+	<param name="P00090" datatype="dt_string" default="最新">
+		<item name="爱建证券" value="爱建证券有限责任公司" formula="32"/>
+		<item name="安信证券" value="安信证券股份有限公司" formula="33"/>
+		<item name="北京高华" value="北京高华证券有限责任公司" formula="2070"/>
+		<item name="北京世华" value="北京世华国际金融信息有限公司" formula="2071"/>
+		<item name="渤海证券" value="渤海证券股份有限公司" formula="31"/>
+		<item name="财达证券" value="财达证券有限责任公司" formula="2072"/>
+		<item name="财富里昂" value="财富里昂证券有限责任公司" formula="2073"/>
+		<item name="财富证券" value="财富证券有限责任公司" formula="34"/>
+		<item name="财通证券" value="财通证券有限责任公司" formula="2074"/>
+		<item name="长城证券" value="长城证券有限责任公司" formula="26"/>
+		<item name="长江证券" value="长江证券股份有限公司" formula="12"/>
+		<item name="大通证券" value="大通证券股份有限公司" formula="35"/>
+		<item name="大同证券" value="大同证券经纪有限责任公司" formula="36"/>
+		<item name="德邦证券" value="德邦证券有限责任公司" formula="37"/>
+		<item name="第一创业" value="第一创业证券股份有限公司" formula="2075"/>
+		<item name="东北证券" value="东北证券股份有限公司" formula="38"/>
+		<item name="东方证券" value="东方证券股份有限公司" formula="11"/>
+		<item name="东海证券" value="东海证券股份有限公司" formula="24"/>
+		<item name="东吴证券" value="东吴证券股份有限公司" formula="40"/>
+		<item name="东兴证券" value="东兴证券股份有限公司" formula="41"/>
+		<item name="东莞证券" value="东莞证券有限责任公司" formula="39"/>
+		<item name="方正证券" value="方正证券股份有限公司" formula="42"/>
+		<item name="高盛高华" value="高盛高华证券有限责任公司" formula="2077"/>
+		<item name="光大证券" value="光大证券股份有限公司" formula="7"/>
+		<item name="广发证券" value="广发证券股份有限公司" formula="27"/>
+		<item name="广州证券" value="广州证券有限责任公司" formula="43"/>
+		<item name="国都证券" value="国都证券有限责任公司" formula="44"/>
+		<item name="国海证券" value="国海证券股份有限公司" formula="45"/>
+		<item name="国金证券" value="国金证券股份有限公司" formula="9"/>
+		<item name="国联证券" value="国联证券股份有限公司" formula="46"/>
+		<item name="国盛证券" value="国盛证券有限责任公司" formula="47"/>
+		<item name="国泰君安" value="国泰君安证券股份有限公司" formula="2"/>
+		<item name="国信证券" value="国信证券股份有限公司" formula="4"/>
+		<item name="国元证券" value="国元证券股份有限公司" formula="30"/>
+		<item name="海通证券" value="海通证券股份有限公司" formula="5"/>
+		<item name="英策咨询" value="杭州英策企业管理咨询有限公司" formula="2078"/>
+		<item name="航天证券" value="航天证券有限责任公司" formula="2079"/>
+		<item name="恒泰证券" value="恒泰证券股份有限公司" formula="48"/>
+		<item name="宏源证券" value="宏源证券股份有限公司" formula="22"/>
+		<item name="红塔证券" value="红塔证券股份有限公司" formula="2080"/>
+		<item name="华安证券" value="华安证券股份有限公司" formula="49"/>
+		<item name="华宝证券" value="华宝证券有限责任公司" formula="2081"/>
+		<item name="华创证券" value="华创证券有限责任公司" formula="50"/>
+		<item name="华福证券" value="华福证券有限责任公司" formula="2082"/>
+		<item name="华林证券" value="华林证券有限责任公司" formula="51"/>
+		<item name="华龙证券" value="华龙证券有限责任公司" formula="2083"/>
+		<item name="华融证券" value="华融证券股份有限公司" formula="52"/>
+		<item name="华泰联合" value="华泰联合证券有限责任公司" formula="2107"/>
+		<item name="华泰证券" value="华泰证券股份有限公司" formula="13"/>
+		<item name="华鑫证券" value="华鑫证券有限责任公司" formula="2084"/>
+		<item name="江海证券" value="江海证券有限公司" formula="53"/>
+		<item name="江南证券" value="江南证券有限责任公司" formula="25"/>
+		<item name="交银国际" value="交银国际证券有限公司" formula="2085"/>
+		<item name="金元证券" value="金元证券股份有限公司" formula="54"/>
+		<item name="开源证券" value="开源证券有限责任公司" formula="2086"/>
+		<item name="凯基证券" value="凯基证券集团" formula="2087"/>
+		<item name="凯基投顾" value="凯基证券投资顾问股份有限公司" formula="2088"/>
+		<item name="联合证券" value="联合证券有限责任公司" formula="21"/>
+		<item name="联讯证券" value="联讯证券有限责任公司" formula="2089"/>
+		<item name="民生证券" value="民生证券股份有限公司" formula="55"/>
+		<item name="莫尼塔" value="莫尼塔(上海)投资发展有限公司" formula="2090"/>
+		<item name="南京证券" value="南京证券股份有限公司" formula="56"/>
+		<item name="平安证券" value="平安证券有限责任公司" formula="14"/>
+		<item name="齐鲁证券" value="齐鲁证券有限公司" formula="57"/>
+		<item name="群益证券(香港)" value="群益证券(香港)有限公司" formula="2091"/>
+		<item name="群益证券" value="群益证券股份有限公司" formula="2092"/>
+		<item name="日信证券" value="日信证券有限责任公司" formula="58"/>
+		<item name="瑞银证券" value="瑞银证券有限责任公司" formula="60"/>
+		<item name="山西证券" value="山西证券股份有限公司" formula="61"/>
+		<item name="上海证券" value="上海证券有限责任公司" formula="18"/>
+		<item name="申银万国" value="申银万国证券股份有限公司" formula="1"/>
+		<item name="世纪证券" value="世纪证券有限责任公司" formula="28"/>
+		<item name="首创证券" value="首创证券有限责任公司" formula="2093"/>
+		<item name="太平洋" value="太平洋证券股份有限公司" formula="2094"/>
+		<item name="天风证券" value="天风证券股份有限公司" formula="2095"/>
+		<item name="天相投顾" value="天相投资顾问有限公司" formula="2096"/>
+		<item name="万联证券" value="万联证券有限责任公司" formula="62"/>
+		<item name="五矿证券" value="五矿证券有限公司" formula="2097"/>
+		<item name="西部证券" value="西部证券股份有限公司" formula="2098"/>
+		<item name="西南证券" value="西南证券股份有限公司" formula="19"/>
+		<item name="厦门证券" value="厦门证券有限公司" formula="2099"/>
+		<item name="湘财证券" value="湘财证券有限责任公司" formula="63"/>
+		<item name="新时代" value="新时代证券有限责任公司" formula="64"/>
+		<item name="信达证券" value="信达证券股份有限公司" formula="65"/>
+		<item name="兴业证券" value="兴业证券股份有限公司" formula="10"/>
+		<item name="英大证券" value="英大证券有限责任公司" formula="66"/>
+		<item name="元富证券(香港)" value="元富证券(香港)有限公司" formula="2100"/>
+		<item name="招商证券" value="招商证券股份有限公司" formula="6"/>
+		<item name="同花顺咨询" value="浙江同花顺投资咨询有限公司" formula="2101"/>
+		<item name="浙商证券" value="浙商证券股份有限公司" formula="67"/>
+		<item name="中金公司" value="中国国际金融有限公司" formula="71"/>
+		<item name="民族证券" value="中国民族证券有限责任公司" formula="2102"/>
+		<item name="银河证券" value="中国银河证券股份有限公司" formula="17"/>
+		<item name="中投证券" value="中国中投证券有限责任公司" formula="2103"/>
+		<item name="中航证券" value="中航证券有限公司" formula="2104"/>
+		<item name="中山证券" value="中山证券有限责任公司" formula="2105"/>
+		<item name="中信建投" value="中信建投证券股份有限公司" formula="15"/>
+		<item name="中信万通" value="中信万通证券有限责任公司" formula="68"/>
+		<item name="中信证券(浙江)" value="中信证券(浙江)有限责任公司" formula="2106"/>
+		<item name="中信证券" value="中信证券股份有限公司" formula="8"/>
+		<item name="中银国际" value="中银国际证券有限责任公司" formula="3"/>
+		<item name="中邮证券" value="中邮证券有限责任公司" formula="69"/>
+		<item name="中原证券" value="中原证券股份有限公司" formula="70"/>
+	</param>
+	<param name="P00091" datatype="dt_integer">
+		<item name="日" value="100"/>
+		<item name="周" value="101"/>
+		<item name="月" value="102"/>
+		<item name="年" value="103"/>
+		<item name="本区间" value="104"/>
+	</param>
+	<param name="P00092" datatype="dt_integer">
+		<item name="日" value="100"/>
+		<item name="周" value="101"/>
+		<item name="月" value="102"/>
+		<item name="年" value="103"/>
+	</param>
+	<param name="P00093" datatype="dt_integer">
+		<item name="看涨" value="100"/>
+		<item name="看跌" value="101"/>
+	</param>
+	<param name="P00098" datatype="dt_integer">
+		<item name="全面摊薄" value="100"/>
+		<item name="加权平均" value="101"/>
+		<item name="扣除/加权" value="102"/>
+		<item name="扣除/摊薄" value="103"/>
+	</param>
+	<param name="P00099" datatype="dt_integer">
+		<item name="第1名" value="1"/>
+		<item name="第2名" value="2"/>
+		<item name="第3名" value="3"/>
+		<item name="第4名" value="4"/>
+		<item name="第5名" value="5"/>
+		<item name="第6名" value="6"/>
+		<item name="第7名" value="7"/>
+		<item name="第8名" value="8"/>
+		<item name="第9名" value="9"/>
+		<item name="第10名" value="10"/>
+	</param>
+	<param name="P00100" datatype="dt_integer">
+		<item name="第1名" value="1"/>
+		<item name="第2名" value="2"/>
+		<item name="第3名" value="3"/>
+		<item name="第4名" value="4"/>
+		<item name="第5名" value="5"/>
+	</param>
+	<param name="P00103" datatype="dt_integer">
+		<item name="境内" value="100"/>
+		<item name="境外" value="101"/>
+	</param>
+	<param name="P00104" datatype="dt_integer">
+		<item name="全面摊薄" value="100"/>
+		<item name="加权平均" value="101"/>
+		<item name="扣除非经常性损益" value="103"/>
+	</param>
+	<param name="P00105" datatype="dt_integer">
+		<item name="全面摊薄" value="103"/>
+		<item name="加权平均" value="100"/>
+	</param>
+	<param name="P00106" datatype="dt_integer">
+		<item name="全面摊薄" value="100"/>
+		<item name="加权平均" value="101"/>
+		<item name="扣除非经常性损益/摊薄" value="102"/>
+		<item name="扣除非经常性损益/加权" value="103"/>
+	</param>
+	<param name="P00107" datatype="dt_integer">
+		<item name="普通收益率" value="101"/>
+		<item name="对数收益率" value="100"/>
+	</param>
+	<param name="P00108" datatype="dt_integer">
+		<item name="上证50指数" value="100"/>
+		<item name="上证180指数" value="101"/>
+		<item name="沪深300指数" value="102"/>
+		<item name="中证100指数" value="103"/>
+		<item name="深证100指数" value="104"/>
+		<item name="中证500指数" value="105"/>
+	</param>
+	<param name="P00109" datatype="dt_integer">
+		<item name="一级行业代码" value="100"/>
+		<item name="二级行业代码" value="101"/>
+		<item name="三级行业代码" value="102"/>
+		<item name="四级行业代码" value="103"/>
+	</param>
+	<param name="P00110" datatype="dt_integer">
+		<item name="一年定存" value="101"/>
+		<item name="七日回购" value="100"/>
+	</param>
+	<param name="P00111" datatype="dt_integer">
+		<item name="一年定存利率（税前）" value="100"/>
+		<item name="一年定存利率（税后）" value="101"/>
+		<item name="一年期国债收益率" value="102"/>
+		<item name="最新发行的一年期央票利率" value="103"/>
+		<item name="银行间市场七日回购利率" value="104"/>
+	</param>
+	<param name="P00116" datatype="dt_integer">
+		<item name="门类行业" value="100"/>
+		<item name="次类行业(限制造业)" value="101"/>
+		<item name="大类行业" value="102"/>
+		<item name="中类行业" value="103"/>
+		<item name="全部明细" value="104"/>
+		<item name="门类-次类" value="105"/>
+	</param>
+	<param name="P00117" datatype="dt_integer">
+		<item name="一级行业" value="100"/>
+		<item name="二级行业" value="101"/>
+		<item name="三级行业" value="102"/>
+		<item name="四级行业" value="103"/>
+		<item name="全部明细" value="108"/>
+		<item name="一级行业英文" value="104"/>
+		<item name="二级行业英文" value="105"/>
+		<item name="三级行业英文" value="106"/>
+		<item name="四级行业英文" value="107"/>
+		<item name="全部明细英文" value="109"/>
+	</param>
+	<param name="P00118" datatype="dt_integer">
+		<item name="一级行业" value="100"/>
+		<item name="二级行业" value="101"/>
+		<item name="三级行业" value="102"/>
+		<item name="全部明细" value="103"/>
+	</param>
+	<param name="P00119" datatype="dt_integer">
+		<item name="一级行业" value="100"/>
+		<item name="二级行业" value="101"/>
+	</param>
+	<param name="P00120" datatype="dt_integer">
+		<item name="新：农、林、牧、渔业(A)" value="123"/>
+		<item name="新：采矿业(B)" value="124"/>
+		<item name="新：制造业(C)" value="125"/>
+		<item name="新：电力、热力、燃气及水生产和供应业(D)" value="126"/>
+		<item name="新：建筑业(E)" value="127"/>
+		<item name="新：批发和零售业(F)" value="128"/>
+		<item name="新：交通运输、仓储和邮政业(G)" value="129"/>
+		<item name="新：住宿和餐饮业(H)" value="130"/>
+		<item name="新：信息传输、软件和信息技术服务业(I)" value="131"/>
+		<item name="新：金融业(J)" value="132"/>
+		<item name="新：房地产业(K)" value="133"/>
+		<item name="新：租赁和商务服务业(L)" value="134"/>
+		<item name="新：科学研究和技术服务业(M)" value="135"/>
+		<item name="新：水利、环境和公共设施管理业(N)" value="136"/>
+		<item name="新：居民服务、修理和其他服务业(O)" value="137"/>
+		<item name="新：教育(P)" value="138"/>
+		<item name="新：卫生和社会工作(Q)" value="139"/>
+		<item name="新：文化、体育和娱乐业(R)" value="140"/>
+		<item name="新：综合(S)" value="141"/>
+		<item name="旧：农、林、牧、渔业(A)" value="100"/>
+		<item name="旧：采掘业(B)" value="101"/>
+		<item name="旧：制造业(C)" value="102"/>
+		<item name="旧：食品、饮料(C0)" value="103"/>
+		<item name="旧：纺织、服装、皮毛(C1)" value="104"/>
+		<item name="旧：木材、家具(C2)" value="105"/>
+		<item name="旧：造纸、印刷(C3)" value="106"/>
+		<item name="旧：石油、化学、塑胶、塑料(C4)" value="107"/>
+		<item name="旧：电子(C5)" value="108"/>
+		<item name="旧：金属、非金属(C6)" value="109"/>
+		<item name="旧：机械、设备、仪表(C7)" value="110"/>
+		<item name="旧：医药、生物制品(C8)" value="111"/>
+		<item name="旧：其他制造业(C99)" value="112"/>
+		<item name="旧：电力、煤气及水的生产和供应业(D)" value="113"/>
+		<item name="旧：建筑业(E)" value="114"/>
+		<item name="旧：交通运输、仓储业(F)" value="115"/>
+		<item name="旧：信息技术业(G)" value="116"/>
+		<item name="旧：批发和零售贸易(H)" value="117"/>
+		<item name="旧：金融、保险业(I)" value="118"/>
+		<item name="旧：房地产业(J)" value="119"/>
+		<item name="旧：社会服务业(K)" value="120"/>
+		<item name="旧：传播与文化产业(L)" value="121"/>
+		<item name="旧：综合类(M)" value="122"/>
+	</param>
+	<param name="P00123" datatype="dt_integer">
+		<item name="2004" value="2004"/>
+		<item name="2005" value="2005"/>
+		<item name="2006" value="2006"/>
+		<item name="2007" value="2007"/>
+		<item name="2008" value="2008"/>
+		<item name="2009" value="2009"/>
+		<item name="2010" value="2010"/>
+		<item name="2011" value="2011"/>
+		<item name="2012" value="2012"/>
+		<item name="2013" value="2013"/>
+		<item name="2014" value="2014"/>
+		<item name="2015" value="2015"/>
+		<item name="2016" value="2016"/>
+		<item name="2017" value="2017"/>
+		<item name="2018" value="2018"/>
+		<item name="2019" value="2019"/>
+	</param>
+	<param name="P00124" datatype="dt_integer">
+		<item name="1月" value="1"/>
+		<item name="2月" value="2"/>
+		<item name="3月" value="3"/>
+		<item name="4月" value="4"/>
+		<item name="5月" value="5"/>
+		<item name="6月" value="6"/>
+		<item name="7月" value="7"/>
+		<item name="8月" value="8"/>
+		<item name="9月" value="9"/>
+		<item name="10月" value="10"/>
+		<item name="11月" value="11"/>
+		<item name="12月" value="12"/>
+	</param>
+	<param name="P00126" datatype="dt_string">
+		<item name="中债-银行间国债指数" value="C14000.CB"/>
+		<item name="中债-固定利率国债指数" value="C10000.CB"/>
+		<item name="中债-交易所国债指数" value="C09000.CB"/>
+		<item name="中债-银行间债券总指数" value="C08000.CB"/>
+		<item name="中债-国债总指数" value="C05000.CB"/>
+		<item name="中债-总指数" value="C02000.CB"/>
+		<item name="中债-综合指数" value="C01000.CB"/>
+		<item name="上证国债指数" value="000012.SH"/>
+		<item name="上证企业债指数" value="000013.SH"/>
+		<item name="中证全债" value="H11001.CSI"/>
+		<item name="中证国债" value="H11006.CSI"/>
+		<item name="中证综合债" value="H11009.CSI"/>
+	</param>
+	<param name="P00127" datatype="dt_integer">
+		<item name="126交易日" value="100"/>
+		<item name="52周" value="101"/>
+		<item name="24月" value="102"/>
+	</param>
+	<param name="P00128" datatype="dt_integer">
+		<item name="全价" value="101"/>
+		<item name="净价" value="100"/>
+	</param>
+	<param name="P00129" datatype="dt_integer">
+		<item name="1年以内" value="100"/>
+		<item name="1-2年" value="101"/>
+		<item name="2-3年" value="102"/>
+		<item name="3年以上" value="103"/>
+	</param>
+	<param name="P00131" datatype="dt_integer">
+		<item name="推荐" value="100"/>
+		<item name="不推荐" value="101"/>
+	</param>
+	<param name="P00136" datatype="dt_integer">
+		<item name="期末数" value="100"/>
+		<item name="本期增加" value="101"/>
+		<item name="本期转回" value="102"/>
+	</param>
+	<param name="P00140" datatype="dt_integer">
+		<item name="30天以内" value="100"/>
+		<item name="30天以内(剩余存续期超过397天的浮动利率债)" value="101"/>
+		<item name="30天(含)-60天" value="102"/>
+		<item name="30天(含)-60天(剩余存续期超过397天的浮动利率债)" value="103"/>
+		<item name="60天(含)-90天" value="104"/>
+		<item name="60天(含)-90天(剩余存续期超过397天的浮动利率债)" value="105"/>
+		<item name="90天(含)-180天" value="106"/>
+		<item name="90天(含)-180天(剩余存续期超过397天的浮动利率债)" value="107"/>
+		<item name="180天(含)-397天" value="108"/>
+		<item name="180天(含)-397天(剩余存续期超过397天的浮动利率债)" value="109"/>
+	</param>
+	<param name="P00141" datatype="dt_float" is_unit="true">
+		<item name=" " value="1"/>
+		<item name="千" value="1000"/>
+		<item name="万" value="10000"/>
+		<item name="百万" value="1000000"/>
+		<item name="亿" value="100000000"/>
+		<item name="十亿" value="1000000000"/>
+	</param>
+	<param name="P00142" datatype="dt_float" is_unit="true">
+		<item name="股" value="1"/>
+		<item name="万股" value="10000"/>
+		<item name="手" value="100"/>
+		<item name="万手" value="1000000"/>
+	</param>
+	<param name="P00144" datatype="dt_integer">
+		<item name="最新年报(LYR)" value="100"/>
+		<item name="最新报告期(MRQ)" value="101"/>
+		<item name="前年年报" value="102"/>
+		<item name="上年年报" value="103"/>
+		<item name="上年三季×4/3" value="104"/>
+		<item name="当年一季×4" value="105"/>
+		<item name="当年中报×2" value="106"/>
+		<item name="当年三季×4/3" value="107"/>
+		<item name="当年年报" value="108"/>
+	</param>
+	<param name="P00145" datatype="dt_integer">
+		<item name="最新年报(LYR)" value="100"/>
+		<item name="最新报告期(MRQ)" value="101"/>
+		<item name="前年年报" value="102"/>
+		<item name="上年年报" value="103"/>
+		<item name="当年一季" value="104"/>
+		<item name="当年中报" value="105"/>
+		<item name="当年三季" value="107"/>
+		<item name="当年年报" value="108"/>
+		<item name="上年三季" value="109"/>
+	</param>
+	<param name="P00146" datatype="dt_integer">
+		<item name="央行规则" value="100"/>
+		<item name="单利" value="101"/>
+		<item name="复利" value="102"/>
+		<item name="复利BE" value="103"/>
+	</param>
+	<param name="P00149" datatype="dt_integer">
+		<item name="中国香港" value="100"/>
+		<item name="美国" value="101"/>
+		<item name="澳大利亚" value="102"/>
+		<item name="韩国" value="103"/>
+		<item name="英国" value="104"/>
+		<item name="新加坡" value="105"/>
+		<item name="印度尼西亚" value="106"/>
+		<item name="瑞士" value="107"/>
+		<item name="印度" value="108"/>
+		<item name="泰国" value="109"/>
+	</param>
+	<param name="P00150" datatype="dt_integer">
+		<item name="爱建证券有限责任公司" value="2029"/>
+		<item name="安信证券股份有限公司" value="2030"/>
+		<item name="北京高华证券有限责任公司" value="2070"/>
+		<item name="北京世华国际金融信息有限公司" value="2071"/>
+		<item name="渤海证券股份有限公司" value="2028"/>
+		<item name="财达证券有限责任公司" value="2072"/>
+		<item name="财富里昂证券有限责任公司" value="2073"/>
+		<item name="财富证券有限责任公司" value="2031"/>
+		<item name="财通证券有限责任公司" value="2074"/>
+		<item name="长城证券有限责任公司" value="2023"/>
+		<item name="长江证券股份有限公司" value="2011"/>
+		<item name="大通证券股份有限公司" value="2032"/>
+		<item name="大同证券经纪有限责任公司" value="2033"/>
+		<item name="德邦证券有限责任公司" value="2034"/>
+		<item name="第一创业证券股份有限公司" value="2075"/>
+		<item name="东北证券股份有限公司" value="2035"/>
+		<item name="东方证券股份有限公司" value="2010"/>
+		<item name="东海证券股份有限公司" value="2021"/>
+		<item name="东吴证券股份有限公司" value="2037"/>
+		<item name="东兴证券股份有限公司" value="2038"/>
+		<item name="东莞证券有限责任公司" value="2036"/>
+		<item name="方正证券股份有限公司" value="2039"/>
+		<item name="高盛高华证券有限责任公司" value="2077"/>
+		<item name="光大证券股份有限公司" value="2006"/>
+		<item name="广发证券股份有限公司" value="2024"/>
+		<item name="广州证券有限责任公司" value="2040"/>
+		<item name="国都证券有限责任公司" value="2041"/>
+		<item name="国海证券股份有限公司" value="2042"/>
+		<item name="国金证券股份有限公司" value="2008"/>
+		<item name="国联证券股份有限公司" value="2043"/>
+		<item name="国盛证券有限责任公司" value="2044"/>
+		<item name="国泰君安证券股份有限公司" value="2001"/>
+		<item name="国信证券股份有限公司" value="2003"/>
+		<item name="国元证券股份有限公司" value="2027"/>
+		<item name="海通证券股份有限公司" value="2004"/>
+		<item name="杭州英策企业管理咨询有限公司" value="2078"/>
+		<item name="航天证券有限责任公司" value="2079"/>
+		<item name="恒泰证券股份有限公司" value="2045"/>
+		<item name="宏源证券股份有限公司" value="2020"/>
+		<item name="红塔证券股份有限公司" value="2080"/>
+		<item name="华安证券股份有限公司" value="2046"/>
+		<item name="华宝证券有限责任公司" value="2081"/>
+		<item name="华创证券有限责任公司" value="2047"/>
+		<item name="华福证券有限责任公司" value="2082"/>
+		<item name="华林证券有限责任公司" value="2048"/>
+		<item name="华龙证券有限责任公司" value="2083"/>
+		<item name="华融证券股份有限公司" value="2049"/>
+		<item name="华泰联合证券有限责任公司" value="2107"/>
+		<item name="华泰证券股份有限公司" value="2012"/>
+		<item name="华鑫证券有限责任公司" value="2084"/>
+		<item name="江海证券有限公司" value="2050"/>
+		<item name="江南证券有限责任公司" value="2022"/>
+		<item name="交银国际证券有限公司" value="2085"/>
+		<item name="金元证券股份有限公司" value="2051"/>
+		<item name="开源证券有限责任公司" value="2086"/>
+		<item name="凯基证券集团" value="2087"/>
+		<item name="凯基证券投资顾问股份有限公司" value="2088"/>
+		<item name="联合证券有限责任公司" value="2019"/>
+		<item name="联讯证券有限责任公司" value="2089"/>
+		<item name="民生证券股份有限公司" value="2052"/>
+		<item name="莫尼塔(上海)投资发展有限公司" value="2090"/>
+		<item name="南京证券股份有限公司" value="2053"/>
+		<item name="平安证券有限责任公司" value="2013"/>
+		<item name="齐鲁证券有限公司" value="2054"/>
+		<item name="群益证券(香港)有限公司" value="2091"/>
+		<item name="群益证券股份有限公司" value="2092"/>
+		<item name="日信证券有限责任公司" value="2055"/>
+		<item name="瑞银证券有限责任公司" value="2057"/>
+		<item name="山西证券股份有限公司" value="2058"/>
+		<item name="上海证券有限责任公司" value="2017"/>
+		<item name="申银万国证券股份有限公司" value="2000"/>
+		<item name="世纪证券有限责任公司" value="2025"/>
+		<item name="首创证券有限责任公司" value="2093"/>
+		<item name="太平洋证券股份有限公司" value="2094"/>
+		<item name="天风证券股份有限公司" value="2095"/>
+		<item name="天相投资顾问有限公司" value="2096"/>
+		<item name="万联证券有限责任公司" value="2059"/>
+		<item name="五矿证券有限公司" value="2097"/>
+		<item name="西部证券股份有限公司" value="2098"/>
+		<item name="西南证券股份有限公司" value="2018"/>
+		<item name="厦门证券有限公司" value="2099"/>
+		<item name="湘财证券有限责任公司" value="2060"/>
+		<item name="新时代证券有限责任公司" value="2061"/>
+		<item name="信达证券股份有限公司" value="2062"/>
+		<item name="兴业证券股份有限公司" value="2009"/>
+		<item name="英大证券有限责任公司" value="2063"/>
+		<item name="元富证券(香港)有限公司" value="2100"/>
+		<item name="招商证券股份有限公司" value="2005"/>
+		<item name="浙江同花顺投资咨询有限公司" value="2101"/>
+		<item name="浙商证券股份有限公司" value="2064"/>
+		<item name="中国国际金融有限公司" value="2068"/>
+		<item name="中国民族证券有限责任公司" value="2102"/>
+		<item name="中国银河证券股份有限公司" value="2016"/>
+		<item name="中国中投证券有限责任公司" value="2103"/>
+		<item name="中航证券有限公司" value="2104"/>
+		<item name="中山证券有限责任公司" value="2105"/>
+		<item name="中信建投证券股份有限公司" value="2014"/>
+		<item name="中信万通证券有限责任公司" value="2065"/>
+		<item name="中信证券(浙江)有限责任公司" value="2106"/>
+		<item name="中信证券股份有限公司" value="2007"/>
+		<item name="中银国际证券有限责任公司" value="2002"/>
+		<item name="中邮证券有限责任公司" value="2066"/>
+		<item name="中原证券股份有限公司" value="2067"/>
+	</param>
+	<param name="P00151" datatype="dt_integer">
+		<item name="申银万国证券" value="2000"/>
+		<item name="国泰君安证券" value="2001"/>
+		<item name="中银国际证券" value="2002"/>
+		<item name="国信证券" value="2003"/>
+		<item name="海通证券" value="2004"/>
+		<item name="招商证券" value="2005"/>
+		<item name="光大证券" value="2006"/>
+		<item name="中信证券" value="2007"/>
+		<item name="国金证券" value="2008"/>
+		<item name="兴业证券" value="2009"/>
+		<item name="东方证券" value="2010"/>
+		<item name="长江证券" value="2011"/>
+		<item name="华泰证券" value="2012"/>
+		<item name="平安证券" value="2013"/>
+		<item name="中信建投证券" value="2014"/>
+		<item name="中投证券" value="2015"/>
+		<item name="中国银河证券" value="2016"/>
+		<item name="上海证券" value="2017"/>
+		<item name="西南证券" value="2018"/>
+		<item name="华泰联合证券" value="2019"/>
+		<item name="宏源证券" value="2020"/>
+		<item name="东海证券" value="2021"/>
+		<item name="江南证券" value="2022"/>
+		<item name="长城证券" value="2023"/>
+		<item name="广发证券" value="2024"/>
+		<item name="世纪证券" value="2025"/>
+		<item name="华西证券" value="2026"/>
+		<item name="国元证券" value="2027"/>
+		<item name="渤海证券" value="2028"/>
+		<item name="爱建证券" value="2029"/>
+		<item name="安信证券" value="2030"/>
+		<item name="财富证券" value="2031"/>
+		<item name="大通证券" value="2032"/>
+		<item name="大同证券" value="2033"/>
+		<item name="德邦证券" value="2034"/>
+		<item name="东北证券" value="2035"/>
+		<item name="东莞证券" value="2036"/>
+		<item name="东吴证券" value="2037"/>
+		<item name="东兴证券" value="2038"/>
+		<item name="方正证券" value="2039"/>
+		<item name="广州证券" value="2040"/>
+		<item name="国都证券" value="2041"/>
+		<item name="国海证券" value="2042"/>
+		<item name="国联证券" value="2043"/>
+		<item name="国盛证券" value="2044"/>
+		<item name="恒泰证券" value="2045"/>
+		<item name="华安证券" value="2046"/>
+		<item name="华创证券" value="2047"/>
+		<item name="华林证券" value="2048"/>
+		<item name="华融证券" value="2049"/>
+		<item name="江海证券" value="2050"/>
+		<item name="金元证券" value="2051"/>
+		<item name="民生证券" value="2052"/>
+		<item name="南京证券" value="2053"/>
+		<item name="齐鲁证券" value="2054"/>
+		<item name="日信证券" value="2055"/>
+		<item name="瑞信方正证券" value="2056"/>
+		<item name="瑞银证券" value="2057"/>
+		<item name="山西证券" value="2058"/>
+		<item name="万联证券" value="2059"/>
+		<item name="湘财证券" value="2060"/>
+		<item name="新时代证券" value="2061"/>
+		<item name="信达证券" value="2062"/>
+		<item name="英大证券" value="2063"/>
+		<item name="浙商证券" value="2064"/>
+		<item name="中信万通证券" value="2065"/>
+		<item name="中邮证券" value="2066"/>
+		<item name="中原证券" value="2067"/>
+		<item name="中金证券" value="2068"/>
+	</param>
+	<param name="P00152" datatype="dt_integer">
+		<item name="一级分类" value="100"/>
+		<item name="二级分类" value="101"/>
+		<item name="三级分类" value="102"/>
+		<item name="概念分类" value="103"/>
+	</param>
+	<param name="P00153" datatype="dt_integer">
+		<item name="晨星" value="100"/>
+		<item name="理柏" value="101"/>
+		<item name="银河" value="102"/>
+	</param>
+	<param name="P00154" datatype="dt_integer">
+		<item name="前端" value="101"/>
+		<item name="后端" value="100"/>
+	</param>
+	<param name="P00156" datatype="dt_integer">
+		<item name="期初未分配利润" value="100"/>
+		<item name="本期实现净利润" value="101"/>
+		<item name="可分配利润" value="102"/>
+		<item name="支付普通股股利" value="103"/>
+		<item name="提取法定盈余公积" value="104"/>
+		<item name="提取任意盈余公积" value="105"/>
+		<item name="转增股本" value="106"/>
+		<item name="年末未分配利润" value="107"/>
+	</param>
+	<param name="P00157" datatype="dt_integer">
+		<item name="天" value="100"/>
+		<item name="年" value="101"/>
+	</param>
+	<param name="P00159" datatype="dt_integer">
+		<item name="显示在X轴" value="100"/>
+		<item name="显示在Y轴" value="101"/>
+	</param>
+	<param name="P00160" datatype="dt_integer">
+		<item name="新：农、林、牧、渔业(A)" value="123"/>
+		<item name="新：采矿业(B)" value="124"/>
+		<item name="新：制造业(C)" value="125"/>
+		<item name="新：电力、热力、燃气及水生产和供应业(D)" value="126"/>
+		<item name="新：建筑业(E)" value="127"/>
+		<item name="新：批发和零售业(F)" value="128"/>
+		<item name="新：交通运输、仓储和邮政业(G)" value="129"/>
+		<item name="新：住宿和餐饮业(H)" value="130"/>
+		<item name="新：信息传输、软件和信息技术服务业(I)" value="131"/>
+		<item name="新：金融业(J)" value="132"/>
+		<item name="新：房地产业(K)" value="133"/>
+		<item name="新：租赁和商务服务业(L)" value="134"/>
+		<item name="新：科学研究和技术服务业(M)" value="135"/>
+		<item name="新：水利、环境和公共设施管理业(N)" value="136"/>
+		<item name="新：居民服务、修理和其他服务业(O)" value="137"/>
+		<item name="新：教育(P)" value="138"/>
+		<item name="新：卫生和社会工作(Q)" value="139"/>
+		<item name="新：文化、体育和娱乐业(R)" value="140"/>
+		<item name="新：综合(S)" value="141"/>
+		<item name="旧：农、林、牧、渔业(A)" value="100"/>
+		<item name="旧：采掘业(B)" value="101"/>
+		<item name="旧：制造业(C)" value="102"/>
+		<item name="旧：食品、饮料(C0)" value="103"/>
+		<item name="旧：纺织、服装、皮毛(C1)" value="104"/>
+		<item name="旧：木材、家具(C2)" value="105"/>
+		<item name="旧：造纸、印刷(C3)" value="106"/>
+		<item name="旧：石油、化学、塑胶、塑料(C4)" value="107"/>
+		<item name="旧：电子(C5)" value="108"/>
+		<item name="旧：金属、非金属(C6)" value="109"/>
+		<item name="旧：机械、设备、仪表(C7)" value="110"/>
+		<item name="旧：医药、生物制品(C8)" value="111"/>
+		<item name="旧：其他制造业(C99)" value="112"/>
+		<item name="旧：电力、煤气及水的生产和供应业(D)" value="113"/>
+		<item name="旧：建筑业(E)" value="114"/>
+		<item name="旧：交通运输、仓储业(F)" value="115"/>
+		<item name="旧：信息技术业(G)" value="116"/>
+		<item name="旧：批发和零售贸易(H)" value="117"/>
+		<item name="旧：金融、保险业(I)" value="118"/>
+		<item name="旧：房地产业(J)" value="119"/>
+		<item name="旧：社会服务业(K)" value="120"/>
+		<item name="旧：传播与文化产业(L)" value="121"/>
+		<item name="旧：综合类(M)" value="122"/>
+	</param>
+	<param name="P00162" datatype="dt_integer">
+		<item name="第1名" value="1"/>
+		<item name="第2名" value="2"/>
+		<item name="第3名" value="3"/>
+		<item name="第4名" value="4"/>
+		<item name="第5名" value="5"/>
+		<item name="第6名" value="6"/>
+		<item name="第7名" value="7"/>
+		<item name="第8名" value="8"/>
+		<item name="第9名" value="9"/>
+		<item name="第10名" value="10"/>
+		<item name="第11名" value="11"/>
+		<item name="第12名" value="12"/>
+		<item name="第13名" value="13"/>
+		<item name="第14名" value="14"/>
+		<item name="第15名" value="15"/>
+		<item name="第16名" value="16"/>
+		<item name="第17名" value="17"/>
+		<item name="第18名" value="18"/>
+		<item name="第19名" value="19"/>
+		<item name="第20名" value="20"/>
+	</param>
+	<param name="P00163" datatype="dt_integer">
+		<item name="固定资产-原值" value="100"/>
+		<item name="固定资产-累计折旧" value="101"/>
+		<item name="固定资产-减值准备" value="102"/>
+		<item name="固定资产-净额" value="103"/>
+		<item name="投资性房地产-原值" value="104"/>
+		<item name="投资性房地产-累计折旧" value="105"/>
+		<item name="投资性房地产-减值准备" value="106"/>
+		<item name="投资性房地产-净额" value="107"/>
+		<item name="生产性生物资产-原值" value="108"/>
+		<item name="生产性生物资产-累计折旧" value="109"/>
+		<item name="生产性生物资产-减值准备" value="110"/>
+		<item name="生产性生物资产-净额" value="111"/>
+		<item name="油气资产-原值" value="112"/>
+		<item name="油气资产-累计折耗" value="113"/>
+		<item name="油气资产-减值准备" value="114"/>
+		<item name="油气资产-净额" value="115"/>
+		<item name="无形资产-原值" value="116"/>
+		<item name="无形资产-累计摊销" value="117"/>
+		<item name="无形资产-减值准备" value="118"/>
+		<item name="无形资产-净额" value="119"/>
+	</param>
+	<param name="P00164" datatype="dt_string">
+		<item name="前收盘价" value="100"/>
+		<item name="开盘价" value="101"/>
+		<item name="最高价" value="102"/>
+		<item name="最低价" value="103"/>
+		<item name="最新价" value="104"/>
+		<item name="涨跌" value="105"/>
+		<item name="涨跌幅" value="106"/>
+		<item name="均价" value="107"/>
+		<item name="成交额" value="108"/>
+		<item name="成交量" value="109"/>
+		<item name="买一价" value="110"/>
+		<item name="买二价" value="111"/>
+		<item name="买三价" value="112"/>
+		<item name="买四价" value="113"/>
+		<item name="买五价" value="114"/>
+		<item name="买六价" value="115"/>
+		<item name="买七价" value="116"/>
+		<item name="买八价" value="117"/>
+		<item name="买九价" value="118"/>
+		<item name="买十价" value="119"/>
+		<item name="买一量" value="120"/>
+		<item name="买二量" value="121"/>
+		<item name="买三量" value="122"/>
+		<item name="买四量" value="123"/>
+		<item name="买五量" value="124"/>
+		<item name="买六量" value="125"/>
+		<item name="买七量" value="126"/>
+		<item name="买八量" value="127"/>
+		<item name="买九量" value="128"/>
+		<item name="买十量" value="129"/>
+		<item name="卖一价" value="130"/>
+		<item name="卖二价" value="131"/>
+		<item name="卖三价" value="132"/>
+		<item name="卖四价" value="133"/>
+		<item name="卖五价" value="134"/>
+		<item name="卖六价" value="135"/>
+		<item name="卖七价" value="136"/>
+		<item name="卖八价" value="137"/>
+		<item name="卖九价" value="138"/>
+		<item name="卖十价" value="139"/>
+		<item name="卖一量" value="140"/>
+		<item name="卖二量" value="141"/>
+		<item name="卖三量" value="142"/>
+		<item name="卖四量" value="143"/>
+		<item name="卖五量" value="144"/>
+		<item name="卖六量" value="145"/>
+		<item name="卖七量" value="146"/>
+		<item name="卖八量" value="147"/>
+		<item name="卖九量" value="148"/>
+		<item name="卖十量" value="149"/>
+	</param>
+	<param name="P00165" datatype="dt_string">
+		<item name="原始币种"/>
+		<item name="人民币" value="CNY"/>
+		<item name="美元" value="USD"/>
+		<item name="港元" value="HKD"/>
+	</param>
+	<param name="P00166" datatype="dt_integer">
+		<item name="OBV" value="100"/>
+		<item name="修正OBV" value="101"/>
+	</param>
+	<param name="P00167" datatype="dt_integer">
+		<item name="PSY" value="101"/>
+		<item name="MAPSY" value="100"/>
+	</param>
+	<param name="P00168" datatype="dt_integer">
+		<item name="WAD" value="101"/>
+		<item name="MAWAD" value="100"/>
+	</param>
+	<param name="P00169" datatype="dt_integer">
+		<item name="WVAD" value="101"/>
+		<item name="MAWVAD" value="100"/>
+	</param>
+	<param name="P00170" datatype="dt_integer">
+		<item name="日" value="100"/>
+		<item name="周" value="101"/>
+		<item name="月" value="102"/>
+		<item name="季" value="103"/>
+		<item name="年" value="104"/>
+	</param>
+	<param name="P00171" datatype="dt_integer">
+		<item name="一季报" value="100"/>
+		<item name="中报" value="101"/>
+		<item name="三季报" value="102"/>
+		<item name="年报" value="103"/>
+	</param>
+	<param name="P00172" datatype="dt_string">
+		<item name="恒生指数" value="HSI.GI"/>
+		<item name="恒生综合指数" value="HSCE.HK"/>
+		<item name="恒生中国企业指数" value="HSCI.HK"/>
+		<item name="上证综合指数" value="000001.SH"/>
+		<item name="深圳成分指数" value="399001.SZ"/>
+	</param>
+	<param name="P00173" datatype="dt_integer">
+		<item name="行业" value="100"/>
+		<item name="业务类别" value="101"/>
+	</param>
+	<param name="P00174" datatype="dt_integer">
+		<item name="2017" value="2017"/>
+		<item name="2016" value="2016"/>
+		<item name="2015" value="2015"/>
+		<item name="2014" value="2014"/>
+		<item name="2013" value="2013"/>
+		<item name="2012" value="2012"/>
+		<item name="2011" value="2011"/>
+		<item name="2010" value="2010"/>
+		<item name="2009" value="2009"/>
+		<item name="2008" value="2008"/>
+		<item name="2007" value="2007"/>
+		<item name="2006" value="2006"/>
+		<item name="2005" value="2005"/>
+		<item name="2004" value="2004"/>
+		<item name="2003" value="2003"/>
+		<item name="2002" value="2002"/>
+		<item name="2001" value="2001"/>
+		<item name="2000" value="2000"/>
+		<item name="1999" value="1999"/>
+		<item name="1998" value="1998"/>
+		<item name="1997" value="1997"/>
+		<item name="1996" value="1996"/>
+		<item name="1995" value="1995"/>
+		<item name="1994" value="1994"/>
+		<item name="1993" value="1993"/>
+		<item name="1992" value="1992"/>
+		<item name="1991" value="1991"/>
+		<item name="1990" value="1990"/>
+	</param>
+	<param name="P00175" datatype="dt_integer">
+		<item name="中报" value="100"/>
+		<item name="年报" value="101"/>
+	</param>
+	<param name="P00176" datatype="dt_integer">
+		<item name="不复权" value="100"/>
+	</param>
+	<param name="P00177" datatype="dt_integer">
+		<item name="2018" value="2018"/>
+		<item name="2017" value="2017"/>
+		<item name="2016" value="2016"/>
+		<item name="2015" value="2015"/>
+		<item name="2014" value="2014"/>
+		<item name="2013" value="2013"/>
+		<item name="2012" value="2012"/>
+		<item name="2011" value="2011"/>
+		<item name="2010" value="2010"/>
+		<item name="2009" value="2009"/>
+		<item name="2008" value="2008"/>
+		<item name="2007" value="2007"/>
+		<item name="2006" value="2006"/>
+		<item name="2005" value="2005"/>
+		<item name="2004" value="2004"/>
+		<item name="2003" value="2003"/>
+		<item name="2002" value="2002"/>
+		<item name="2001" value="2001"/>
+		<item name="2000" value="2000"/>
+		<item name="1999" value="1999"/>
+		<item name="1998" value="1998"/>
+		<item name="1997" value="1997"/>
+		<item name="1996" value="1996"/>
+		<item name="1995" value="1995"/>
+		<item name="1994" value="1994"/>
+		<item name="1993" value="1993"/>
+		<item name="1992" value="1992"/>
+		<item name="1991" value="1991"/>
+		<item name="1990" value="1990"/>
+	</param>
+	<param name="P00178" datatype="dt_integer">
+		<item name="能源" value="100"/>
+		<item name="原材料" value="101"/>
+		<item name="工业" value="102"/>
+		<item name="非日常生活消费品" value="103"/>
+		<item name="日常消费品" value="104"/>
+		<item name="医疗保健" value="105"/>
+		<item name="金融" value="106"/>
+		<item name="信息技术" value="107"/>
+		<item name="电信业务" value="108"/>
+		<item name="公用事业" value="109"/>
+	</param>
+	<param name="P00179" datatype="dt_string">
+		<item name="人民币" value="CNY"/>
+		<item name="美元" value="USD"/>
+		<item name="港元" value="HKD"/>
+	</param>
+	<param name="P00180" datatype="dt_integer">
+		<item name="1362中国固定利率国债收益率曲线" value="1362"/>
+		<item name="1232银行间固定利率国债收益率曲线" value="1232"/>
+		<item name="1322银行间固定利率政策性金融债收益率曲线(进出口行和农发行)" value="1322"/>
+		<item name="1882固定利率铁道部收益率曲线" value="1882"/>
+		<item name="1102银行间中短期票据收益率曲线(AAA)" value="1102"/>
+		<item name="1502银行间中短期票据收益率曲线(AAA-)" value="1502"/>
+		<item name="1082银行间中短期票据收益率曲线(AA+)" value="1082"/>
+		<item name="1072银行间中短期票据收益率曲线(AA)" value="1072"/>
+		<item name="1092银行间中短期票据收益率曲线(AA-)" value="1092"/>
+		<item name="1052银行间中短期票据收益率曲线(A+)" value="1052"/>
+		<item name="1042银行间中短期票据收益率曲线(A)" value="1042"/>
+		<item name="1062银行间中短期票据收益率曲线(A-)" value="1062"/>
+		<item name="1262中债企业债收益率曲线(AAA)" value="1262"/>
+		<item name="1842中债企业债收益率曲线(AAA-)" value="1842"/>
+		<item name="1442中债企业债收益率曲线(AA＋)" value="1442"/>
+		<item name="1832银行间固定利率企业债收益率曲线(AA+(2))" value="1832"/>
+		<item name="1252中债企业债收益率曲线(AA)" value="1252"/>
+		<item name="1872银行间固定利率企业债收益率曲线(AA(2))" value="1872"/>
+		<item name="1482中债企业债收益率曲线(AA-)" value="1482"/>
+		<item name="1822银行间固定利率企业债收益率曲线(AA-(2))" value="1822"/>
+		<item name="1852中债企业债收益率曲线(A＋)" value="1852"/>
+		<item name="1902中债企业债收益率曲线(A)" value="1902"/>
+		<item name="1312银行间固定利率商业银行次级债收益率曲线(AAA)" value="1312"/>
+		<item name="1292银行间固定利率商业银行次级债收益率曲线(AA＋)" value="1292"/>
+		<item name="1282银行间固定利率商业银行次级债收益率曲线(AA)" value="1282"/>
+		<item name="1302银行间固定利率商业银行次级债收益率曲线(AA-)" value="1302"/>
+		<item name="1452银行间固定利率商业银行次级债收益率曲线(A＋)" value="1452"/>
+		<item name="1492银行间固定利率商业银行次级债收益率曲线(A)" value="1492"/>
+		<item name="1272银行间固定利率商业银行次级债收益率曲线(A-)" value="1272"/>
+		<item name="1912中债企业债收益率曲线(BBB＋)" value="1912"/>
+		<item name="1332中债固定利率资产支持证券收益率(AAA)" value="1332"/>
+		<item name="1032央行票据收益率曲线" value="1032"/>
+		<item name="1012交易所固定利率国债收益率曲线" value="1012"/>
+		<item name="1022交易所固定利率企业债收益率曲线(AAA)" value="1022"/>
+		<item name="1172中国固定利率国债收益率曲线" value="1172"/>
+		<item name="1212固定利率铁道部收益率曲线(减税)" value="1212"/>
+		<item name="1242中债地方政府债收益率曲线(AAA)" value="1242"/>
+		<item name="1372中债地方政府债收益率曲线(AAA-)" value="1372"/>
+		<item name="1392银行间固定利率政策性金融债收益率曲线(国开行)" value="1392"/>
+		<item name="1402银行间中短期票据收益率曲线(超AAA)" value="1402"/>
+		<item name="1422银行间固定利率商业银行次级债收益率曲线(BBB＋)" value="1422"/>
+		<item name="1462银行间固定利率商业银行普通债收益率曲线(AAA)" value="1462"/>
+		<item name="1472银行间固定利率商业银行普通债收益率曲线(AAA-)" value="1472"/>
+		<item name="1512银行间固定利率商业银行普通债收益率曲线(AA＋)" value="1512"/>
+		<item name="1522银行间固定利率商业银行普通债收益率曲线(AA)" value="1522"/>
+		<item name="1532银行间固定利率商业银行普通债收益率曲线(AA-)" value="1532"/>
+		<item name="1542银行间固定利率商业银行普通债收益率曲线(A＋)" value="1542"/>
+		<item name="1552中债固定利率资产支持证券收益率(AA+)" value="1552"/>
+		<item name="1562中债企业债收益率曲线(A-)" value="1562"/>
+		<item name="1572中债企业债收益率曲线(BBB)" value="1572"/>
+		<item name="1582中债企业债收益率曲线(BB)" value="1582"/>
+		<item name="1592中债企业债收益率曲线(B)" value="1592"/>
+		<item name="1602中债企业债收益率曲线(CCC)" value="1602"/>
+		<item name="1612中债企业债收益率曲线(CC)" value="1612"/>
+		<item name="1622中债城投债收益率曲线(AAA)" value="1622"/>
+		<item name="1632中债城投债收益率曲线(AA＋)" value="1632"/>
+		<item name="1642中债城投债收益率曲线(AA)" value="1642"/>
+		<item name="1652中债城投债收益率曲线(AA(2))" value="1652"/>
+		<item name="1662中债城投债收益率曲线(AA-)" value="1662"/>
+		<item name="1112银行间浮动利率国债点差(1y)收益率曲线" value="1112"/>
+		<item name="1122中债浮动利率企业债(Depo-1Y)点差曲线(AAA)" value="1122"/>
+		<item name="1132银行间浮动利率企业债(R07D_2W)点差收益率曲线(AAA)" value="1132"/>
+		<item name="1412银行间浮动利率企业债(SHIBOR_1W_120D)点差收益率曲线(AAA)" value="1412"/>
+		<item name="1862银行间浮动利率企业债(SHIBOR_1Y_10D)点差收益率曲线(AA+(2))" value="1862"/>
+		<item name="1142银行间浮动利率商业银行次级债(1y)点差收益率曲线(AA)" value="1142"/>
+		<item name="1152银行间浮动利率商业银行次级债(1y)点差收益率曲线(AA-)" value="1152"/>
+		<item name="1162银行间浮动利率商业银行次级债(1y)点差收益率曲线(AAA)" value="1162"/>
+		<item name="1702银行间浮动利率商业银行次级债(SHIBOR_3M_5D)点差收益率曲线(AA)" value="1702"/>
+		<item name="1922银行间浮动利率商业银行次级债(1y)点差收益率曲线(AA＋)" value="1922"/>
+		<item name="1222中债浮动利率资产支持证券(Depo-1Y)点差曲线(AAA)" value="1222"/>
+		<item name="1432中债浮动利率资产支持证券点差(1y)收益率(BBB)" value="1432"/>
+		<item name="1182中债浮动利率资产支持证券(Depo-1Y)点差曲线(A)" value="1182"/>
+		<item name="1192银行间浮动利率资产支持证券(R07D_1M)点差收益率曲线(A)" value="1192"/>
+		<item name="1202中债浮动利率资产支持证券(R07D-1M)点差曲线(AAA)" value="1202"/>
+		<item name="1342银行间政策性银行浮动利率(1y)债点差收益率曲线" value="1342"/>
+		<item name="1352银行间政策性银行浮动利率(R07D_2W)点差收益率曲线" value="1352"/>
+		<item name="1382银行间政策性银行浮动利率(SHIBOR)债点差收益率曲线" value="1382"/>
+		<item name="1802交易所浮动利率企业债(1y)点差收益率曲线(AAA)" value="1802"/>
+		<item name="1672银行间政策性银行浮动利率(SHIBOR_3M_5D)债点差收益率曲线" value="1672"/>
+		<item name="1682银行间浮动利率企业债(SHIBOR_3M_5D)点差收益率曲线(AAA)" value="1682"/>
+		<item name="1692银行间浮动利率中短期票据(1y)点差收益率曲线(AAA)" value="1692"/>
+		<item name="1712银行间浮动利率中短期票据(1y)点差收益率曲线(AA＋)" value="1712"/>
+		<item name="1722银行间浮动利率中短期票据(1y)点差收益率曲线(AA)" value="1722"/>
+		<item name="1732银行间浮动利率中短期票据(1y)点差收益率曲线(AA-)" value="1732"/>
+		<item name="1742银行间浮动利率中短期票据(1y)点差收益率曲线(A-)" value="1742"/>
+		<item name="1752银行间浮动利率中短期票据(SHIBOR_1Y_20D)点差收益率曲线(AAA)" value="1752"/>
+		<item name="1762银行间浮动利率中短期票据(SHIBOR_1Y_20D)点差收益率曲线(AA＋)" value="1762"/>
+		<item name="1772银行间浮动利率商业银行普通债(1y)点差收益率曲线(AAA)" value="1772"/>
+		<item name="1782银行间浮动利率商业银行普通债(1y)点差收益率曲线(AA＋)" value="1782"/>
+		<item name="1792银行间浮动利率商业银行普通债(1y)点差收益率曲线(AA)" value="1792"/>
+		<item name="1812银行间浮动利率商业银行普通债(SHIBOR_3M_1D)点差收益率曲线(AAA-)" value="1812"/>
+		<item name="1892银行间浮动利率商业银行普通债(SHIBOR_3M_1D)点差收益率曲线(AA＋)" value="1892"/>
+		<item name="1932银行间浮动利率资产支持证券(R07D_1M)点差收益率曲线(AA)" value="1932"/>
+		<item name="1942中债浮动利率城投债(SHIBOR-1Y-10D)点差曲线(AA＋)" value="1942"/>
+		<item name="1952中债固定利率资产支持证券收益率(AAA-)" value="1952"/>
+		<item name="1962中债固定利率资产支持证券收益率(AA)" value="1962"/>
+		<item name="1972中债固定利率资产支持证券收益率(AA-)" value="1972"/>
+		<item name="1982中债固定利率资产支持证券收益率(A+)" value="1982"/>
+		<item name="1992中债浮动利率资产支持证券(Depo-1Y)点差曲线(AA)" value="1992"/>
+	</param>
+	<param name="P00181" datatype="dt_integer">
+		<item name="结构化" value="100"/>
+		<item name="非结构化" value="101"/>
+	</param>
+	<param name="P00182" datatype="dt_integer">
+		<item name="一级分类" value="100"/>
+		<item name="二级分类" value="101"/>
+	</param>
+	<param name="P00183" datatype="dt_integer">
+		<item name="行业部门" value="100"/>
+		<item name="行业组" value="101"/>
+		<item name="行业" value="102"/>
+		<item name="子行业" value="103"/>
+	</param>
+	<param name="P00184" datatype="dt_integer">
+		<item name="基金公司" value="100"/>
+		<item name="证券公司" value="101"/>
+		<item name="信托机构" value="102"/>
+		<item name="财务公司" value="103"/>
+		<item name="保险公司" value="104"/>
+		<item name="QFII" value="105"/>
+		<item name="其他" value="106"/>
+	</param>
+	<param name="P00185" datatype="dt_integer">
+		<item name="不复权" value="100"/>
+		<item name="后复权" value="101"/>
+		<item name="前复权" value="102"/>
+		<item name="全流通后复权" value="103"/>
+		<item name="全流通前复权" value="104"/>
+	</param>
+	<param name="P00186" datatype="dt_integer">
+		<item name="30天" value="30"/>
+		<item name="90天" value="90"/>
+		<item name="180天" value="180"/>
+	</param>
+	<param name="P00187" datatype="dt_integer">
+		<item name="晨星" value="100"/>
+		<item name="银河" value="101"/>
+		<item name="上海证券" value="102"/>
+	</param>
+	<param name="P00188" datatype="dt_integer">
+		<item name="前年年报" value="100"/>
+		<item name="上年年报" value="101"/>
+		<item name="当年一季×4" value="102"/>
+		<item name="当年中报×2" value="103"/>
+		<item name="当年三季×4/3" value="104"/>
+		<item name="最新报告期(MRQ)" value="105"/>
+		<item name="当年年报" value="106"/>
+		<item name="最新年报(LYR)" value="107"/>
+		<item name="上年三季×4/3" value="110"/>
+		<item name="上年中报×2" value="109"/>
+	</param>
+	<param name="P00189" datatype="dt_integer">
+		<item name="得到关联方提供资金发生额" value="100"/>
+		<item name="得到关联方提供资金余额" value="101"/>
+	</param>
+	<param name="P00190" datatype="dt_integer">
+		<item name="向关联方提供资金发生额" value="100"/>
+		<item name="向关联方提供资金余额" value="101"/>
+	</param>
+	<param name="P00191" datatype="dt_integer">
+		<item name="门类行业" value="100"/>
+		<item name="大类行业" value="101"/>
+		<item name="全部明细" value="102"/>
+	</param>
+	<param name="P00192" datatype="dt_integer">
+		<item name="报表截止日期" value="100"/>
+		<item name="报表公告日期" value="101"/>
+	</param>
+	<param name="P00193" datatype="dt_string" default="最新">
+		<item name="最新" value="100" formula="NOW()"/>
+	</param>
+	<param name="P00194" datatype="dt_integer">
+		<item name="日" value="100"/>
+		<item name="周" value="101"/>
+		<item name="月" value="102"/>
+		<item name="季度" value="103"/>
+		<item name="半年" value="104"/>
+		<item name="年" value="105"/>
+	</param>
+	<param name="P00195" datatype="dt_string">
+		<item name="Y" value="Y"/>
+		<item name="M" value="M"/>
+		<item name="W" value="W"/>
+	</param>
+	<param name="P00196" datatype="dt_integer">
+		<item name="县级" value="3"/>
+		<item name="省级" value="1"/>
+		<item name="市级" value="2"/>
+	</param>
+	<param name="P00197" datatype="dt_integer">
+		<item name="季报" value="100"/>
+		<item name="中报" value="101"/>
+		<item name="年报" value="102"/>
+		<item name="其他" value="103"/>
+	</param>
+	<param name="P00198" datatype="dt_integer">
+		<item name="一般分红" value="100"/>
+		<item name="特别分红" value="101"/>
+	</param>
+	<param name="P00199" datatype="dt_integer">
+		<item name="现任" value="100"/>
+		<item name="历任" value="101"/>
+	</param>
+	<param name="P00200" datatype="dt_string">
+		<item name="澳元" value="AUD"/>
+		<item name="菲律宾比索" value="PHP"/>
+		<item name="港币" value="HKD"/>
+		<item name="加拿大元" value="CAD"/>
+		<item name="马来西亚元" value="MYR"/>
+		<item name="美元" value="USD"/>
+		<item name="南韩元" value="KRW"/>
+		<item name="欧元" value="EUR"/>
+		<item name="人民币" value="CNY"/>
+		<item name="日元" value="JPY"/>
+		<item name="瑞士法郎" value="CHF"/>
+		<item name="泰铢" value="THB"/>
+		<item name="新加坡元" value="SGB"/>
+		<item name="新台币" value="TWD"/>
+		<item name="印度卢比" value="INR"/>
+		<item name="英镑" value="GBP"/>
+	</param>
+	<param name="P00201" datatype="dt_integer">
+		<item name="一季×4较上年年报增长率" value="100"/>
+		<item name="中报×2较上年年报增长率" value="101"/>
+		<item name="三季×4/3较上年年报增长率" value="102"/>
+		<item name="年报增长率" value="103"/>
+	</param>
+	<param name="P00202" datatype="dt_integer">
+		<item name="一季×4" value="100"/>
+		<item name="中报×2" value="101"/>
+		<item name="三季×4/3" value="102"/>
+		<item name="年报" value="103"/>
+	</param>
+	<param name="P00203" datatype="dt_integer">
+		<item name="5年期国债期货TF1609" value="106"/>
+		<item name="5年期国债期货TF1612" value="107"/>
+		<item name="5年期国债期货TF1703" value="108"/>
+		<item name="5年期国债期货TF1706" value="109"/>
+		<item name="10年期国债期货T1609" value="101"/>
+		<item name="10年期国债期货T1612" value="102"/>
+		<item name="10年期国债期货T1703" value="103"/>
+		<item name="10年期国债期货T1706" value="104"/>
+	</param>
+	<param name="P00204" datatype="dt_string">
+		<item name="0331" value="0331"/>
+		<item name="0630" value="0630"/>
+		<item name="0930" value="0930"/>
+		<item name="1231" value="1231"/>
+	</param>
+	<param name="P00205" datatype="dt_string">
+		<item name="全部" value="0"/>
+		<item name="中诚信国际信用评级有限责任公司" value="@00052961"/>
+		<item name="联合资信评估有限公司" value="@00063767"/>
+		<item name="大公国际资信评估有限公司" value="@00080222"/>
+		<item name="上海新世纪资信评估投资服务有限公司" value="@00090187"/>
+		<item name="鹏元资信评估有限公司" value="@00000154"/>
+		<item name="中诚信证券评估有限公司" value="@03147156"/>
+		<item name="联合信用评级有限公司" value="@T000026705"/>
+		<item name="上海远东资信评估有限公司" value="@00086829"/>
+		<item name="中债资信评估有限责任公司" value="@T000072498"/>
+		<item name="东方金诚国际信用评估有限公司" value="@03150160"/>
+		<item name="中国诚信证券评估有限公司" value="@00000141"/>
+		<item name="云南国联资信评估有限公司" value="@00000184"/>
+		<item name="标准普尔评级服务公司" value="@T000025787"/>
+		<item name="长城资信评估有限公司" value="@00000229"/>
+		<item name="北京穆迪投资者服务有限公司" value="@00215345"/>
+		<item name="大公国际资信评估有限责任公司" value="@00000235"/>
+		<item name="福建省资信评级委员会" value="@00062177"/>
+		<item name="辽宁省资信评估有限公司" value="@00000247"/>
+	</param>
+	<param name="P00206" datatype="dt_string">
+		<item name="全部" value="0"/>
+		<item name="联合资信评估有限公司" value="@00063767"/>
+		<item name="中诚信国际信用评级有限责任公司" value="@00052961"/>
+		<item name="大公国际资信评估有限公司" value="@00080222"/>
+		<item name="上海新世纪资信评估投资服务有限公司" value="@00090187"/>
+		<item name="中债资信评估有限责任公司" value="@T000072498"/>
+		<item name="标准普尔评级服务公司" value="@T000025787"/>
+		<item name="鹏元资信评估有限公司" value="@00000154"/>
+		<item name="中诚信证券评估有限公司" value="@03147156"/>
+		<item name="联合信用评级有限公司" value="@T000026705"/>
+		<item name="惠誉国际信用评级有限公司" value="@00221115"/>
+		<item name="穆迪投资者服务公司" value="@T000135457"/>
+		<item name="上海远东资信评估有限公司" value="@00086829"/>
+		<item name="东方金诚国际信用评估有限公司" value="@03150160"/>
+		<item name="北京穆迪投资者服务有限公司" value="@00215345"/>
+		<item name="大公国际资信评估有限责任公司" value="@00000235"/>
+		<item name="江苏国际咨询评估公司" value="@00075081"/>
+		<item name="江苏远东国际评估咨询有限公司" value="@00221117"/>
+	</param>
+	<param name="P00207" datatype="dt_string">
+		<item name="安粮期货" value="1001"/>
+		<item name="安信期货" value="1002"/>
+		<item name="宝城期货" value="1003"/>
+		<item name="渤海期货" value="1004"/>
+		<item name="财达期货" value="1005"/>
+		<item name="财富期货" value="1006"/>
+		<item name="长安期货" value="1007"/>
+		<item name="长江期货" value="1008"/>
+		<item name="成都倍特期货" value="1009"/>
+		<item name="创元期货" value="1010"/>
+		<item name="大连良运期货" value="1011"/>
+		<item name="大通期货" value="1012"/>
+		<item name="大有期货" value="1013"/>
+		<item name="大越期货" value="1014"/>
+		<item name="道通期货" value="1015"/>
+		<item name="德盛期货" value="1016"/>
+		<item name="第一创业期货" value="1017"/>
+		<item name="东方汇金期货" value="1018"/>
+		<item name="东海期货" value="1019"/>
+		<item name="东航期货" value="1020"/>
+		<item name="东吴期货" value="1021"/>
+		<item name="东兴期货" value="1022"/>
+		<item name="方正期货" value="1023"/>
+		<item name="方正中期期货" value="1024"/>
+		<item name="格林期货" value="1025"/>
+		<item name="冠通期货" value="1026"/>
+		<item name="光大期货" value="1027"/>
+		<item name="广东鸿海期货" value="1028"/>
+		<item name="广发期货" value="1029"/>
+		<item name="广永期货" value="1030"/>
+		<item name="广州期货" value="1031"/>
+		<item name="国都期货" value="1032"/>
+		<item name="国富期货" value="1033"/>
+		<item name="国海良时期货" value="1034"/>
+		<item name="国金期货" value="1035"/>
+		<item name="国联期货" value="1036"/>
+		<item name="国贸期货" value="1037"/>
+		<item name="国泰君安期货" value="1038"/>
+		<item name="国投中谷期货" value="1039"/>
+		<item name="国信期货" value="1040"/>
+		<item name="国元期货" value="1041"/>
+		<item name="海航东银期货" value="1042"/>
+		<item name="海南金海岸期货" value="1043"/>
+		<item name="海通期货" value="1044"/>
+		<item name="海证期货" value="1045"/>
+		<item name="和合期货" value="1046"/>
+		<item name="和融期货" value="1047"/>
+		<item name="河北恒银期货" value="1048"/>
+		<item name="黑龙江三力期货" value="1049"/>
+		<item name="黑龙江时代期货" value="1050"/>
+		<item name="恒泰期货" value="1051"/>
+		<item name="宏源期货" value="1052"/>
+		<item name="弘业期货" value="1053"/>
+		<item name="红塔期货" value="1054"/>
+		<item name="华安期货" value="1055"/>
+		<item name="华创期货" value="1056"/>
+		<item name="华海期货" value="1057"/>
+		<item name="华联期货" value="1058"/>
+		<item name="华龙期货" value="1059"/>
+		<item name="华南期货" value="1060"/>
+		<item name="华融期货" value="1061"/>
+		<item name="华泰长城期货" value="1062"/>
+		<item name="华闻期货" value="1063"/>
+		<item name="华西期货" value="1064"/>
+		<item name="华元期货" value="1065"/>
+		<item name="华证期货" value="1066"/>
+		<item name="华鑫期货" value="1067"/>
+		<item name="徽商期货" value="1068"/>
+		<item name="集成期货" value="1069"/>
+		<item name="江海汇鑫期货" value="1070"/>
+		<item name="江南期货" value="1071"/>
+		<item name="江苏东华期货" value="1072"/>
+		<item name="江苏文峰期货" value="1073"/>
+		<item name="江西瑞奇期货" value="1074"/>
+		<item name="江信国盛期货" value="1075"/>
+		<item name="金鹏期货" value="1076"/>
+		<item name="金瑞期货" value="1077"/>
+		<item name="金石期货" value="1078"/>
+		<item name="金信期货" value="1079"/>
+		<item name="金友期货" value="1080"/>
+		<item name="金元期货" value="1081"/>
+		<item name="津投期货" value="1082"/>
+		<item name="锦泰期货" value="1083"/>
+		<item name="京都期货" value="1084"/>
+		<item name="经易期货" value="1085"/>
+		<item name="久恒期货" value="1086"/>
+		<item name="鲁证期货" value="1087"/>
+		<item name="迈科期货" value="1088"/>
+		<item name="美尔雅期货" value="1089"/>
+		<item name="民生期货" value="1090"/>
+		<item name="摩根大通期货" value="1091"/>
+		<item name="南华期货" value="1092"/>
+		<item name="南证期货" value="1093"/>
+		<item name="宁波杉立期货" value="1094"/>
+		<item name="平安期货" value="1095"/>
+		<item name="乾坤期货" value="1096"/>
+		<item name="瑞达期货" value="1097"/>
+		<item name="山西三立期货" value="1098"/>
+		<item name="上海大陆期货" value="1099"/>
+		<item name="上海东方期货" value="1100"/>
+		<item name="上海东亚期货" value="1101"/>
+		<item name="上海东证期货" value="1102"/>
+		<item name="上海良茂期货" value="1103"/>
+		<item name="上海普民期货" value="1104"/>
+		<item name="上海通联期货" value="1105"/>
+		<item name="上海浙石期货" value="1106"/>
+		<item name="上海中财期货" value="1107"/>
+		<item name="上海中期期货" value="1108"/>
+		<item name="申银万国期货" value="1109"/>
+		<item name="深圳金汇期货" value="1110"/>
+		<item name="深圳瑞龙期货" value="1111"/>
+		<item name="神华期货" value="1112"/>
+		<item name="盛达期货" value="1113"/>
+		<item name="首创期货" value="1114"/>
+		<item name="天风期货" value="1115"/>
+		<item name="天富期货" value="1116"/>
+		<item name="天鸿期货" value="1117"/>
+		<item name="天津金谷期货" value="1118"/>
+		<item name="铜冠金源" value="1119"/>
+		<item name="万达期货" value="1120"/>
+		<item name="五矿期货" value="1121"/>
+		<item name="西部期货" value="1122"/>
+		<item name="西南期货" value="1123"/>
+		<item name="湘财祈年期货" value="1124"/>
+		<item name="象屿期货" value="1125"/>
+		<item name="新湖期货" value="1126"/>
+		<item name="新纪元期货" value="1127"/>
+		<item name="新疆天利期货" value="1128"/>
+		<item name="新晟期货" value="1129"/>
+		<item name="信达期货" value="1130"/>
+		<item name="兴证期货" value="1131"/>
+		<item name="一德期货" value="1132"/>
+		<item name="银河期货" value="1133"/>
+		<item name="银建期货" value="1134"/>
+		<item name="英大期货" value="1135"/>
+		<item name="永安期货" value="1136"/>
+		<item name="云晨期货" value="1137"/>
+		<item name="招金期货" value="1138"/>
+		<item name="招商期货" value="1139"/>
+		<item name="浙江大地" value="1140"/>
+		<item name="浙江新世纪期货" value="1141"/>
+		<item name="浙江中大期货" value="1142"/>
+		<item name="浙商期货" value="1143"/>
+		<item name="中电投先融期货" value="1144"/>
+		<item name="中钢期货" value="1145"/>
+		<item name="中国国际期货" value="1146"/>
+		<item name="中航期货" value="1147"/>
+		<item name="中辉期货" value="1148"/>
+		<item name="中粮期货" value="1149"/>
+		<item name="中融汇信期货" value="1150"/>
+		<item name="中投天琪" value="1151"/>
+		<item name="中信建投期货" value="1152"/>
+		<item name="中信期货" value="1153"/>
+		<item name="中信新际期货" value="1154"/>
+		<item name="中衍期货" value="1155"/>
+		<item name="中银国际期货" value="1156"/>
+		<item name="中原期货" value="1157"/>
+		<item name="中州期货" value="1158"/>
+		<item name="珠江期货" value="1159"/>
+		<item name="晟鑫期货" value="1160"/>
+		<item name="鑫鼎盛期货" value="1161"/>
+	</param>
+	<param name="P00208" datatype="dt_integer">
+		<item name="全价" value="101"/>
+		<item name="净价" value="100"/>
+		<item name="收益率" value="102"/>
+	</param>
+	<param name="P00209" datatype="dt_integer">
+		<item name="标准普尔500指数" value="1"/>
+		<item name="道琼斯工业平均指数" value="2"/>
+		<item name="纳斯达克100指数" value="3"/>
+	</param>
+	<param name="P00210" datatype="dt_integer">
+		<item name="门类Division" value="1"/>
+		<item name="主要分组Major Group" value="2"/>
+		<item name="产业分组Industry Group" value="3"/>
+		<item name="特殊产业" value="4"/>
+	</param>
+	<param name="P00211" datatype="dt_integer">
+		<item name="一季报" value="1"/>
+		<item name="中报" value="2"/>
+		<item name="三季报" value="3"/>
+		<item name="年报" value="4"/>
+	</param>
+	<param name="P00212" datatype="dt_integer">
+		<item name="一年定存利率（税前）" value="100"/>
+		<item name="一年定存利率（税后）" value="101"/>
+		<item name="一年期国债收益率" value="102"/>
+		<item name="五年期国债收益率" value="105"/>
+		<item name="十年期国债收益率" value="106"/>
+		<item name="最新发行的一年期央票利率" value="103"/>
+		<item name="银行间市场七日回购利率" value="104"/>
+	</param>
+	<param name="P00213" datatype="dt_integer">
+		<item name="10年沪深指数平均收益" value="1"/>
+		<item name="5年沪深指数平均收益" value="2"/>
+		<item name="10年上证综指平均收益" value="3"/>
+		<item name="5年沪深300指数平均收益" value="4"/>
+		<item name="5年上证综指平均收益" value="5"/>
+	</param>
+	<param name="P00214" datatype="dt_integer">
+		<item name="期末余额" value="100"/>
+		<item name="期初余额" value="101"/>
+		<item name="本期增加额" value="102"/>
+		<item name="本期减少额" value="103"/>
+	</param>
+	<param name="P00215" datatype="dt_string" default="请选择评级机构">
+		<item name="国内评级公司" select="true">
+			<items>
+				<item name="上海新世纪资信评估投资服务有限公司" value="@00090187" select="true"/>
+				<item name="上海远东资信评估有限公司" value="@00086829" select="true"/>
+				<item name="东方金诚国际信用评估有限公司" value="@03150160" select="true"/>
+				<item name="中债资信评估有限责任公司" value="@T000072498" select="true"/>
+				<item name="中诚信国际信用评级有限责任公司" value="@00052961" select="true"/>
+				<item name="中诚信证券评估有限公司" value="@03147156" select="true"/>
+				<item name="大公国际资信评估有限公司" value="@00080222" select="true"/>
+				<item name="江苏国际咨询评估公司" value="@00075081" select="true"/>
+				<item name="江苏远东国际评估咨询有限公司" value="@00221117" select="true"/>
+				<item name="联合信用评级有限公司" value="@T000026705" select="true"/>
+				<item name="联合资信评估有限公司" value="@00063767" select="true"/>
+				<item name="鹏元资信评估有限公司" value="@00000154" select="true"/>
+			</items>
+		</item>
+		<item name="国外评级公司">
+			<items>
+				<item name="惠誉国际信用评级有限公司" value="@00221115"/>
+				<item name="穆迪投资者服务公司" value="@T000135457"/>
+				<item name="北京穆迪投资者服务有限公司" value="@00215345"/>
+				<item name="标准普尔评级服务公司" value="@T000025787"/>
+			</items>
+		</item>
+	</param>
+	<param name="P00216" datatype="dt_integer">
+		<item name="不复权" value="100"/>
+		<item name="后复权(现金分红)" value="105"/>
+		<item name="前复权(现金分红)" value="106"/>
+		<item name="后复权(分红再投)" value="101"/>
+		<item name="前复权(分红再投)" value="102"/>
+		<item name="全流通后复权(分红再投)" value="103"/>
+		<item name="全流通前复权(分红再投)" value="104"/>
+	</param>
+	<param name="P00217" datatype="dt_integer">
+		<item name="现金认购" value="100"/>
+		<item name="资产认购" value="101"/>
+		<item name="现金和资产认购" value="102"/>
+	</param>
+	<param name="P00218" datatype="dt_integer">
+		<item name="上证指数" value="100"/>
+		<item name="上证180" value="101"/>
+		<item name="深证成指" value="102"/>
+		<item name="深证100" value="103"/>
+		<item name="沪深300" value="104"/>
+		<item name="创业板综" value="105"/>
+	</param>
+	<param name="P00219" datatype="dt_integer">
+		<item name="前年年报" value="100"/>
+		<item name="上年年报" value="101"/>
+		<item name="当年一季×4" value="102"/>
+		<item name="当年中报×2" value="103"/>
+		<item name="当年三季×4/3" value="104"/>
+		<item name="当年年报" value="105"/>
+	</param>
+	<param name="P00220" datatype="dt_string" default="请选择评级机构">
+		<item name="国内评级公司" select="true">
+			<items>
+				<item name="长城资信评估有限公司" value="@00000229" select="true"/>
+				<item name="东方金诚国际信用评估有限公司" value="@03150160" select="true"/>
+				<item name="大公国际资信评估有限公司" value="@00080222" select="true"/>
+				<item name="福建省资信评级委员会" value="@00062177" select="true"/>
+				<item name="联合信用评级有限公司" value="@T000026705" select="true"/>
+				<item name="联合资信评估有限公司" value="@00063767" select="true"/>
+				<item name="辽宁省资信评估有限公司" value="@00000247" select="true"/>
+				<item name="鹏元资信评估有限公司" value="@00000154" select="true"/>
+				<item name="上海新世纪资信评估投资服务有限公司" value="@00090187" select="true"/>
+				<item name="上海远东资信评估有限公司" value="@00086829" select="true"/>
+				<item name="云南国联资信评估有限公司" value="@00000184" select="true"/>
+				<item name="中诚信国际信用评级有限责任公司" value="@00052961" select="true"/>
+				<item name="中诚信证券评估有限公司" value="@03147156" select="true"/>
+				<item name="中国诚信证券评估有限公司" value="@00000141" select="true"/>
+				<item name="中债资信评估有限责任公司" value="@T000072498" select="true"/>
+			</items>
+		</item>
+		<item name="国外评级公司">
+			<items>
+				<item name="北京穆迪投资者服务有限公司" value="@00215345"/>
+				<item name="标准普尔评级服务公司" value="@T000025787"/>
+				<item name="惠誉国际信用评级有限公司" value="@00221115"/>
+				<item name="穆迪投资者服务公司" value="@T000135457"/>
+			</items>
+		</item>
+	</param>
+	<param name="P00221" datatype="dt_string">
+		<item name="道琼斯工业平均指数" value="DJI.GI"/>
+		<item name="纳斯达克综合指数" value="IXIC.GI"/>
+		<item name="标准普尔500指数" value="SPX.GI"/>
+		<item name="上证指数" value="000001.SH"/>
+		<item name="深证成指" value="399001.SZ"/>
+		<item name="恒生指数" value="HSI.GI"/>
+	</param>
+	<param name="P00222" datatype="dt_integer">
+		<item name="账面余额" value="100"/>
+		<item name="跌价准备" value="101"/>
+		<item name="账面价值" value="102"/>
+	</param>
+	<param name="P00223" datatype="dt_integer">
+		<item name="按账面价值比" value="100"/>
+		<item name="按账面价值比(扣除企业所得税)" value="101"/>
+		<item name="按市场价值比" value="102"/>
+		<item name="用户自定义" value="103"/>
+	</param>
+	<param name="P00224" datatype="dt_string" default="最新">
+		<item name="最新" value="100" formula="thsiFinD(&quot;THS_TRADEDATE&quot;,thscode,NOW(),0)"/>
+		<item name="前一交易日" value="101" formula="thsiFinD(&quot;THS_TRADEDATE&quot;,thscode,NOW(),-1)"/>
+		<item name="1周前" value="102" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-1,&quot;W&quot;,0)"/>
+		<item name="1月前" value="103" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-1,&quot;M&quot;,0)"/>
+		<item name="3月前" value="104" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-3,&quot;M&quot;,0)"/>
+		<item name="6月前" value="105" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-6,&quot;M&quot;,0)"/>
+		<item name="1年前" value="106" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-1,&quot;Y&quot;,0)"/>
+		<item name="2年前" value="107" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),-2,&quot;Y&quot;,0)"/>
+		<item name="本年初" value="108" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),0,&quot;Y&quot;,1)"/>
+		<item name="本月初" value="109" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),0,&quot;M&quot;,1)"/>
+		<item name="本周一" value="110" formula="thsiFinD(&quot;THS_CALCULATEDATE&quot;,NOW(),0,&quot;W&quot;,1)"/>
+		<item name="上市首日" value="111" formula="thsiFinD(&quot;THS_SFSSRQ_STOCK&quot;,thscode)"/>
+		<item name="摘牌日期" value="112" formula="thsiFinD(&quot;THS_ZPRQ_STOCK&quot;,thscode)"/>
+	</param>
+	<param name="P00225" datatype="dt_string" default="最新">
+		<item name="最新" value="100"/>
+		<item name="初始" value="101"/>
+	</param>
+	<param name="P00900" datatype="dt_float" is_unit="true">
+		<item name="张" value="1"/>
+		<item name="手" value="10"/>
+		<item name="万张" value="10000"/>
+		<item name="万手" value="100000"/>
+	</param>
+	<param name="P10001" datatype="dt_integer">
+		<item name="DDI" value="1" process="1002"/>
+		<item name="ADDI" value="2" process="1003"/>
+		<item name="AD" value="3" process="1004"/>
+	</param>
+	<param name="P10002" datatype="dt_integer">
+		<item name="DDD" value="1" process="1005"/>
+		<item name="AMA" value="2" process="1006"/>
+	</param>
+	<param name="P10003" datatype="dt_integer">
+		<item name="DIFF" value="1" process="1008"/>
+		<item name="DEA" value="2" process="1009"/>
+		<item name="MACD" value="3" process="1007"/>
+	</param>
+	<param name="P10004" datatype="dt_integer">
+		<item name="MTM" value="1" process="1010"/>
+		<item name="MAMTM" value="2" process="1011"/>
+	</param>
+	<param name="P10005" datatype="dt_integer">
+		<item name="TRIX" value="1" process="1013"/>
+		<item name="TRMA" value="2" process="1014"/>
+	</param>
+	<param name="P10006" datatype="dt_integer">
+		<item name="DBCD" value="1" process="1018"/>
+		<item name="MM" value="2" process="1019"/>
+	</param>
+	<param name="P10007" datatype="dt_integer">
+		<item name="DPO" value="1" process="1020"/>
+		<item name="MADPO" value="2" process="1021"/>
+	</param>
+	<param name="P10008" datatype="dt_integer">
+		<item name="K" value="1" process="1022"/>
+		<item name="D" value="2" process="1023"/>
+		<item name="J" value="3" process="1024"/>
+	</param>
+	<param name="P10009" datatype="dt_integer">
+		<item name="LWR1" value="1" process="1025"/>
+		<item name="LWR2" value="2" process="1026"/>
+	</param>
+	<param name="P10010" datatype="dt_integer">
+		<item name="ROC" value="1" process="1027"/>
+		<item name="ROCMA" value="2" process="1028"/>
+	</param>
+	<param name="P10011" datatype="dt_integer">
+		<item name="SRDM" value="1" process="1030"/>
+		<item name="ASRDM" value="2" process="1031"/>
+	</param>
+	<param name="P10012" datatype="dt_integer">
+		<item name="AR" value="1" process="1037"/>
+		<item name="BR" value="2" process="1038"/>
+	</param>
+	<param name="P10013" datatype="dt_integer">
+		<item name="PSY" value="1" process="1040"/>
+		<item name="MAPSY" value="2" process="1041"/>
+	</param>
+	<param name="P10014" datatype="dt_integer">
+		<item name="WAD" value="1" process="1043"/>
+		<item name="MAWAD" value="2" process="1044"/>
+	</param>
+	<param name="P10015" datatype="dt_integer">
+		<item name="OBV" value="1" process="1046"/>
+		<item name="修正OBV" value="2" process="1047"/>
+	</param>
+	<param name="P10016" datatype="dt_integer">
+		<item name="WVAD" value="1" process="1049"/>
+		<item name="MAWVAD" value="2" process="1050"/>
+	</param>
+	<param name="P10017" datatype="dt_integer">
+		<item name="BBIBOLL" value="1" process="1051"/>
+		<item name="UPR" value="2" process="1052"/>
+		<item name="DWN" value="3" process="1053"/>
+	</param>
+	<param name="P10018" datatype="dt_integer">
+		<item name="CDP" value="1" process="1057"/>
+		<item name="AH" value="2" process="1058"/>
+		<item name="AL" value="3" process="1059"/>
+		<item name="NH" value="4" process="1060"/>
+		<item name="NL" value="5" process="1061"/>
+	</param>
+	<param name="P10019" datatype="dt_integer">
+		<item name="UPPER" value="1" process="1068"/>
+		<item name="LOWER" value="2" process="1069"/>
+	</param>
+	<param name="P10020" datatype="dt_integer">
+		<item name="WR" value="1" process="1062"/>
+		<item name="MR" value="2" process="1063"/>
+		<item name="SR" value="3" process="1064"/>
+		<item name="WS" value="4" process="1065"/>
+		<item name="MS" value="5" process="1066"/>
+		<item name="SS" value="6" process="1067"/>
+	</param>
+	<param name="P10021" datatype="dt_integer">
+		<item name="DIFF" value="1" process="1071"/>
+		<item name="DEA" value="2" process="1072"/>
+		<item name="MACD" value="3" process="1070"/>
+	</param>
+	<param name="P10022" datatype="dt_integer">
+		<item name="TAPI" value="1" process="1074"/>
+		<item name="MATAPI" value="2" process="1075"/>
+	</param>
+	<param name="P10023" datatype="dt_integer">
+		<item name="ADTM" value="1" process="1079"/>
+		<item name="MAADTM" value="2" process="1080"/>
+	</param>
+	<param name="P10024" datatype="dt_integer">
+		<item name="A" value="1" process="1082"/>
+		<item name="MI" value="2" process="1081s"/>
+	</param>
+	<param name="P10025" datatype="dt_integer">
+		<item name="DIF" value="1" process="1084"/>
+		<item name="MICD" value="2" process="1083"/>
+	</param>
+	<param name="P10026" datatype="dt_integer">
+		<item name="DIF" value="1" process="1089"/>
+		<item name="RCCD" value="2" process="1088"/>
+	</param>
+	<param name="P10027" datatype="dt_integer">
+		<item name="上证指数" value="1"/>
+		<item name="上证180" value="2"/>
+		<item name="深证成指" value="3"/>
+		<item name="沪深300" value="4"/>
+	</param>
+	<param name="P10028" datatype="dt_integer">
+		<item name="B" value="1" process="1094"/>
+		<item name="D" value="2" process="1095"/>
+	</param>
+	<param name="P10029" datatype="dt_integer">
+		<item name="TR" value="1" process="1097"/>
+		<item name="ATR" value="2" process="1096"/>
+	</param>
+	<param name="P10030" datatype="dt_integer">
+		<item name="MID" value="1" process="1054"/>
+		<item name="UPPER" value="2" process="1055"/>
+		<item name="LOWER" value="3" process="1056"/>
+	</param>
+	<param name="P10031" datatype="dt_string" default="最新一期(MRQ)">
+		<item name="最新年报公告日前5个交易日" value="108" formula="thsiFinD(&quot;THS_TSHSJYR_GNHS&quot;, thsiFinD(&quot;THS_LASTREPORTDATE&quot;,thscode,103),-5)"/>
+		<item name="去年年报" value="100" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,-1,4)"/>
+		<item name="今年一季" value="101" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,0,1)"/>
+		<item name="今年中报" value="102" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,0,2)"/>
+		<item name="今年三季" value="103" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,0,3)"/>
+		<item name="最新一期(MRQ)" value="104" formula="thsiFinD(&quot;THS_CALCULATELASTREPORT&quot;,thscode ,NOW())"/>
+		<item name="去年一季" value="105" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,-1,1)"/>
+		<item name="去年中报" value="106" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,-1,2)"/>
+		<item name="去年三季" value="107" formula="thsiFinD(&quot;THS_CALCULATEREPORT&quot;,-1,3)"/>
+	</param>
+	<param name="P10032" datatype="dt_integer">
+		<item name="K" value="100"/>
+		<item name="D" value="101"/>
+	</param>
+	<param name="P10033" datatype="dt_integer">
+		<item name="2017" value="2017"/>
+		<item name="2016" value="2016"/>
+		<item name="2015" value="2015"/>
+		<item name="2014" value="2014"/>
+		<item name="2013" value="2013"/>
+		<item name="2012" value="2012"/>
+		<item name="2011" value="2011"/>
+		<item name="2010" value="2010"/>
+		<item name="2009" value="2009"/>
+		<item name="2008" value="2008"/>
+		<item name="2007" value="2007"/>
+		<item name="2006" value="2006"/>
+		<item name="2005" value="2005"/>
+		<item name="2004" value="2004"/>
+		<item name="2003" value="2003"/>
+		<item name="2002" value="2002"/>
+		<item name="2001" value="2001"/>
+		<item name="2000" value="2000"/>
+		<item name="1999" value="1999"/>
+		<item name="1998" value="1998"/>
+		<item name="1997" value="1997"/>
+		<item name="1996" value="1996"/>
+		<item name="1995" value="1995"/>
+		<item name="1994" value="1994"/>
+		<item name="1993" value="1993"/>
+		<item name="1992" value="1992"/>
+		<item name="1991" value="1991"/>
+		<item name="1990" value="1990"/>
+	</param>
+	<param name="P10034" datatype="dt_string" default="最新">
+		<item name="最新" value="104" formula="thsiFinD(&quot;THS_CALCULATELASTREPORT&quot;,thscode ,NOW())"/>
+	</param>
+	<param name="QDII行业数据" datatype="dt_integer">
+		<item name="能源" value="100"/>
+		<item name="原材料" value="101"/>
+		<item name="工业" value="102"/>
+		<item name="非日常生活消费品" value="103"/>
+		<item name="日常消费品" value="104"/>
+		<item name="医疗保健" value="105"/>
+		<item name="金融" value="106"/>
+		<item name="信息技术" value="107"/>
+		<item name="电信业务" value="108"/>
+		<item name="公用事业" value="109"/>
+	</param>
+</params>

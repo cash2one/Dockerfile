@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config version="1.0">
+	<serverSite seleted="1">
+		<url id="1" name="自动选择服务器" path="http://ft.10jqka.com.cn/thsft/"/>
+		<url id="2" name="电信服务器" path="http://ftct.10jqka.com.cn/thsft/"/>
+		<url id="3" name="联通服务器" path="http://ftcu.10jqka.com.cn/thsft/"/>
+		<url id="4" name="杭州华数服务器" path="http://fthzcnc.10jqka.com.cn/thsft/"/>
+		<url id="5" name="杭州移动服务器" path="http://ftcm.10jqka.com.cn/thsft/"/>
+		<url id="6" name="测试服务器" path="http://testft.10jqka.com.cn/thsft/"/>
+	</serverSite>
+	<ModeUrl>
+		<url id="0" name="登陆验证" path="jgbservice"/>
+		<url id="1" name="升级配置" path="jgbservice?reqtype=update_list&amp;base=updatev3"/>
+		<url id="2" name="实时行情" path="iFindService/realTimeQuotation/index/index"/>
+		<url id="3" name="高频序列" path="iFindService/highFrequency/index/index"/>
+		<url id="4" name="日期序列" path="iFindService/highFrequency/multiple"/>
+		<url id="5" name="EDB" path="edbservice?"/>
+		<url id="6" name="历史行情" path="iFindService/historyQuotation/index/json"/>
+		<url id="7" name="基础数据" path="excelservice?type=client&amp;unifyjson=1"/>
+		<url id="8" name="数据池"   path="iFindService/DataPool/index/json"/>
+		<url id="9" name="代码信息" path="iFindService/ClientTools/ths-info/get-hq-code?thscode="/>
+	</ModeUrl>
+</config>

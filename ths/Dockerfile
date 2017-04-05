@@ -3,10 +3,13 @@ FROM ubuntu:16.04
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
 ADD ./bin64 /ths_lib
-RUN ls /ths_lib
+RUN ldd /ths_lib/libShellExport.so
+RUN ldd /ths_lib/libFTDataInterface.so
+RUN ldd /ths_lib/hqdatafeed
 RUN apt update
 RUN apt install -y python3 \
                    python3-dev \
                    python3-pip
+RUN python3 /ths_lib/installiFinDPy.py /ths_lib
 
 CMD python3 /var/app/run.py

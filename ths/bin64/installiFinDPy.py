@@ -34,6 +34,10 @@ def InstallPython():
         if( ix>=0 and x[ix:]=='site-packages'):
           sitepath=x;
           break;
+        ix=x.find('dist-packages')
+        if( ix>=0 and x[ix:]=='dist-packages'):
+          sitepath=x;
+          break;
 
     print(sitepath)
     if(iswin):

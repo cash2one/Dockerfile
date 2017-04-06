@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ADD ./bin64 /ths_lib/bin64
 RUN ldd /ths_lib/bin64/libShellExport.so
 RUN ldd /ths_lib/bin64/libFTDataInterface.so

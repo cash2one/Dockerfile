@@ -13,7 +13,7 @@ RUN apt update
 RUN apt install -y python3 \
                    python3-dev \
                    python3-pip \
-                   python-pip
+                   python-pip \
                    libidn11
 
 RUN pip install --no-cache-dir supervisor

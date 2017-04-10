@@ -5,6 +5,7 @@ scipy
 matplotlib
 pandas
 TA-Lib
+tensorflow
 
 requests
 apscheduler
@@ -14,14 +15,10 @@ flask-apscheduler
 raven
 flask_cors
 suds-jurko
-pandas
 numpy
 marshmallow
-mongoengine
 prometheus_client
 flask-caching
-mock
 redis
 hiredis
-celery
 aiohttp

@@ -3,7 +3,7 @@ FROM ubuntu
 
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
-RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+ADD .Shanghai /etc/localtime
 ADD requirements.txt /home
 ADD uwsgi.ini /etc/uwsgi.ini
 ADD supervisord.conf /etc/supervisord.conf

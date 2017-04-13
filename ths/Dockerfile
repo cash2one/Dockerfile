@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
-RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+ADD .Shanghai /etc/localtime
 ADD uwsgi.ini /etc/uwsgi.ini
 ADD supervisord.conf /etc/supervisord.conf
 

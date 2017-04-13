@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
-RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+ADD Shanghai /etc/localtime
 ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 

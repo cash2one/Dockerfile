@@ -4,6 +4,7 @@ MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
 ADD Shanghai /etc/localtime
 ENV LANG en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
 ENV LANGUAGE en_US:en
 
 ADD start.sh /start.sh

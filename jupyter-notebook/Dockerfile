@@ -38,6 +38,7 @@ RUN pip3 install --no-cache-dir -r requirements3.txt
 RUN rm -rf /var/lib/apt/lists/*
 
 ADD SimSun.ttf /usr/lib/python3/dist-packages/matplotlib/mpl-data/fonts/ttf
+ADD matplotlibrc /usr/lib/python3/dist-packages/matplotlib/mpl-data/matplotlibrc
 
 VOLUME /notebooks
 WORKDIR /notebooks

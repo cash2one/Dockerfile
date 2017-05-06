@@ -19,7 +19,7 @@ COPY ta-lib-0.4.0-src.tar.gz ta-lib.tar.gz
 
 # RUN apt-get install -y python python-dev python-pip
 RUN apt install -y python3 python3-dev python3-pip
-RUN pip3 install --no-cache-dir jupyter ipython
+# RUN pip3 install --no-cache-dir jupyter ipython
 # RUN python2 -m pip install --no-cache-dir ipykernel
 # RUN python2 -m ipykernel install --user
 
@@ -34,9 +34,11 @@ RUN rm -rf ta-lib
 
 WORKDIR /
 RUN pip3 install --no-cache-dir -r requirements3.txt
+RUN jupyter contrib nbextension install --user
 
 RUN rm -rf /var/lib/apt/lists/*
 
+ADD custom.css ~/.jupyter/custom/custom.css
 ADD SimSun.ttf /usr/local/lib/python3.5/dist-packages/matplotlib/mpl-data/fonts/ttf
 ADD matplotlibrc /usr/local/lib/python3.5/dist-packages/matplotlib/mpl-data/matplotlibrc
 

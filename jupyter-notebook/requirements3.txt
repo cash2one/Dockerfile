@@ -1,12 +1,16 @@
-celery
-mongoengine
+jupyter
+ipython
+jupyter_contrib_nbextensions
 numpy
 scipy
 matplotlib
 pandas
 TA-Lib
 tensorflow
+yapf
 
+celery
+mongoengine
 requests
 apscheduler
 pymongo

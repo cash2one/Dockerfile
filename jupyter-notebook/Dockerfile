@@ -38,7 +38,7 @@ RUN jupyter contrib nbextension install --user
 
 RUN rm -rf /var/lib/apt/lists/*
 
-ADD custom.css ~/.jupyter/custom/custom.css
+ADD custom.css /root/.jupyter/custom/custom.css
 ADD SimSun.ttf /usr/local/lib/python3.5/dist-packages/matplotlib/mpl-data/fonts/ttf
 ADD matplotlibrc /usr/local/lib/python3.5/dist-packages/matplotlib/mpl-data/matplotlibrc
 

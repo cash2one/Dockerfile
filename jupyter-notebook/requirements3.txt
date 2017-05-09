@@ -26,3 +26,4 @@ flask-caching
 redis
 hiredis
 aiohttp
+transitions

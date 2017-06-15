@@ -1,16 +1,19 @@
-ÔÚµ÷ÓÃÇ°±ØĞëµ÷ÓÃ ldd libShellExport.so, ldd hqdatafeedºÍ ldd libFTDataInterface.so ²é¿´±¾¿âËù
-ĞèÒªÒÀÀµµÄ»·¾³ÊÇ·ñÒÑ¾­ÆëÈ«, Èç¹û²»ÆëÈ«,ÇëÊ¹ÓÃyum »òÕß apt-get°²×°
+åœ¨è°ƒç”¨å‰å¿…é¡»è°ƒç”¨ ldd libShellExport.so, ldd hqdatafeedå’Œ ldd libFTDataInterface.so æŸ¥çœ‹æœ¬åº“æ‰€
+
+éœ€è¦ä¾èµ–çš„ç¯å¢ƒæ˜¯å¦å·²ç»é½å…¨, å¦‚æœä¸é½å…¨,è¯·ä½¿ç”¨yum æˆ–è€… apt-getå®‰è£…
+Centos: sudo yum install -y libgcc.i686 zlib.i686 glibc.i686 libstdc++-devel.i686
+ubuntu: sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 
 
 how to use this iFinDPy.py
-1¡¢install 
-   32Î»µ÷ÓÃbinÄ¿Â¼ÖĞµÄinstalliFinDPy.py°²×°£¬ÊäÈë²ÎÊıÎªÎÄ¼şÑ¹ËõºóµÄÎÄ¼şÂ·¾¶
-   ÀıÈç:Ñ¹Ëõ°ü½âÑ¹·ÅÔÚ/libÄ¿Â¼ÏÂ
-   python  /lib/bin/installiFinDPy.py /lib
+1ã€install 
+   32ä½è°ƒç”¨binç›®å½•ä¸­çš„installiFinDPy.pyå®‰è£…ï¼Œè¾“å…¥å‚æ•°ä¸ºæ–‡ä»¶å‹ç¼©åçš„æ–‡ä»¶è·¯å¾„
+   ä¾‹å¦‚:å‹ç¼©åŒ…è§£å‹æ”¾åœ¨/libç›®å½•ä¸‹
+   sudo python  /lib/bin/installiFinDPy.py /lib
    
-   64Î»µ÷ÓÃbin64Ä¿Â¼ÖĞµÄinstalliFinDPy.py°²×°£¬ÊäÈë²ÎÊıÎªÎÄ¼şÑ¹ËõºóµÄÎÄ¼şÂ·¾¶
-   ÀıÈç:Ñ¹Ëõ°ü½âÑ¹·ÅÔÚ/libÄ¿Â¼ÏÂ
+   64ä½è°ƒç”¨bin64ç›®å½•ä¸­çš„installiFinDPy.pyå®‰è£…ï¼Œè¾“å…¥å‚æ•°ä¸ºæ–‡ä»¶å‹ç¼©åçš„æ–‡ä»¶è·¯å¾„
+   ä¾‹å¦‚:å‹ç¼©åŒ…è§£å‹æ”¾åœ¨/libç›®å½•ä¸‹
    python  /lib/bin64/installiFinDPy.py /lib
-2¡¢use
-   µ¼ÈëiFinDPy.pyÄ£¿é  
+2ã€use
+   å¯¼å…¥iFinDPy.pyæ¨¡å—  
        from iFinDPy import *
-       µ÷ÓÃ¶ÔÓ¦µÄº¯Êı¼´¿É,binÄ¿Â¼ÏÂÓĞÒ»¸ösample.py Ê¹ÓÃ°¸Àı
+       è°ƒç”¨å¯¹åº”çš„å‡½æ•°å³å¯,binç›®å½•ä¸‹æœ‰ä¸€ä¸ªsample.py ä½¿ç”¨æ¡ˆä¾‹

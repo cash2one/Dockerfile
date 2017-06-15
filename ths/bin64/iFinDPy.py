@@ -166,34 +166,32 @@ class iFinD:
     sitepath=".";           
     for x in sys.path:
         ix=x.find('site-packages')
-        if( ix>=0 and x[ix:]=='site-packages'):
-          sitepath=x;
-          break;
-        ix=x.find('dist-packages')
-        if( ix>=0 and x[ix:]=='dist-packages'):
-          sitepath=x;
-          break;
-    if(isWin):
-        sitepath=sitepath+"\\iFinDPy.pth"
-    else:
-        sitepath=sitepath+"/iFinDPy.pth"
-    pathfile=open(sitepath)
-    dllpath=pathfile.readlines();
-    pathfile.close();
-    dllpath=''.join(dllpath).strip('\n')
-    #print(dllpath)
-    if(isWin):
-        bit=int(sys.version.split(' bit ')[0].split()[-1]);
-        if(bit==32 ):
-            sitepath=dllpath+"\\ShellExport.dll"
-        else:
-            sitepath=dllpath+"\\ShellExport.dll"
-    else:
-        architecture = platform.architecture();
-        if(architecture[0]== '32bit'):
-            sitepath=dllpath+"/libShellExport.so";
-        else:
-            sitepath=dllpath+"/libShellExport.so";  
+        iy=x.find('dist-packages')
+        if( (ix>=0 and x[ix:]=='site-packages') or (iy>=0 and x[iy:]=='dist-packages')):
+            sitepath=x;
+            if(isWin):
+                sitepath=sitepath+"\\iFinDPy.pth"
+            else:
+                sitepath=sitepath+"/iFinDPy.pth"
+            print(sitepath)
+            if(os.path.exists(sitepath)):
+                pathfile=open(sitepath)
+                dllpath=pathfile.readlines();
+                pathfile.close();
+                dllpath=''.join(dllpath).strip('\n')
+                if(isWin):
+                    bit=int(sys.version.split(' bit ')[0].split()[-1]);
+                    if(bit==32 ):
+                        sitepath=dllpath+"\\ShellExport.dll"
+                    else:
+                        sitepath=dllpath+"\\ShellExport.dll"
+                else:
+                    architecture = platform.architecture();
+                    if(architecture[0]== '32bit'):
+                        sitepath=dllpath+"/libShellExport.so";
+                    else:
+                        sitepath=dllpath+"/libShellExport.so";
+  
     #print(sitepath)
     c_iFinDlib=cdll.LoadLibrary(sitepath)
 

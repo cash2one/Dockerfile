@@ -9,6 +9,7 @@ TA-Lib
 tensorflow
 yapf
 
+pymc3
 celery
 mongoengine
 requests

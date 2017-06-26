@@ -17,7 +17,7 @@ ADD uwsgi.ini /etc/uwsgi.ini
 ADD supervisord.conf /etc/supervisord.conf
 
 WORKDIR /
-ADD ta-lib-0.4.0-src.tar.gz ta-lib.tar.gz
+COPY ta-lib-0.4.0-src.tar.gz ta-lib.tar.gz
 RUN tar -zxvf ta-lib.tar.gz
 RUN rm -rf ta-lib.tar.gz 
 WORKDIR /ta-lib 

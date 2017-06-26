@@ -17,3 +17,4 @@ redis
 hiredis
 celery
 aiohttp
+TA-Lib

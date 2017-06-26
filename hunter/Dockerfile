@@ -23,6 +23,16 @@ RUN ls -al /home/lib
 RUN cp /home/lib/Emquant/Linux_3/libs/x64/libjson.so /usr/lib
 RUN python3 /home/lib/Emquant/Linux_3/installEmQuantAPI_Ex.py
 
+ADD ta-lib-0.4.0-src.tar.gz ta-lib.tar.gz
+RUN tar -zxvf ta-lib.tar.gz
+RUN rm -rf ta-lib.tar.gz 
+WORKDIR /ta-lib 
+RUN ./configure --prefix=/usr
+RUN make
+RUN make install
+RUN cd ..
+RUN rm -rf ta-lib
+
 RUN rm -rf /var/lib/apt/lists/*
 RUN rm -rf /tmp/*
 

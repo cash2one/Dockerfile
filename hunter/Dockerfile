@@ -1,9 +1,9 @@
-
-FROM ubuntu
+FROM ubuntu:16.04
 
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
 ADD Shanghai /etc/localtime
+
 ADD requirements.txt /home
 ADD uwsgi.ini /etc/uwsgi.ini
 ADD supervisord.conf /etc/supervisord.conf

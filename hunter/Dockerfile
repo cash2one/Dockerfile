@@ -5,7 +5,7 @@ MAINTAINER zhoujunqian <zjqzero@gmail.com>
 ADD Shanghai /etc/localtime
 
 RUN apt update
-RUN apt install -y language-pack-zh-hans-base
+RUN apt install -y language-pack-zh-hans-base gcc
 
 RUN locale-gen en_US.UTF-8  
 ENV LANG en_US.UTF-8

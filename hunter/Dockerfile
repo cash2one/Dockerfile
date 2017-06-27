@@ -2,15 +2,17 @@ FROM ubuntu:16.04
 
 MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
-ADD Shanghai /etc/localtime
 
 RUN apt update
-RUN apt install -y language-pack-zh-hans-base gcc make
+RUN apt install -y gcc make
 
-RUN locale-gen en_US.UTF-8  
-ENV LANG en_US.UTF-8
-ENV LC_ALL en_US.UTF-8
-ENV LANGUAGE en_US:en
+ENV LANG C.UTF-8
+# RUN apt install -y language-pack-zh-hans-base
+# ADD Shanghai /etc/localtime
+# RUN locale-gen en_US.UTF-8  
+# ENV LANG en_US.UTF-8
+# ENV LC_ALL en_US.UTF-8
+# ENV LANGUAGE en_US:en
 
 ADD requirements.txt /home
 ADD uwsgi.ini /etc/uwsgi.ini
@@ -25,7 +27,7 @@ RUN ./configure --prefix=/usr
 RUN make
 RUN make install
 RUN cd ..
-RUN rm -rf ta-lib
+RUN rm -rf /ta-lib
 
 RUN apt install -y python3-dev \
                    python3-pip \
@@ -36,6 +38,12 @@ RUN pip install --no-cache-dir supervisor
 RUN pip3 install --no-cache-dir -r /home/requirements.txt
 RUN pip3 install --no-cache-dir uwsgi
 
+RUN apt purge -y python3-dev \
+		 python-dev \
+		 gcc \
+                 make
+
+RUN apt autoremove -y
 
 RUN rm -rf /var/lib/apt/lists/*
 RUN rm -rf /tmp/*

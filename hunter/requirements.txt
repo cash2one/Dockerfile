@@ -19,3 +19,4 @@ hiredis
 celery
 aiohttp
 TA-Lib
+blinker

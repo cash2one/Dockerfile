@@ -38,9 +38,7 @@ RUN pip install --no-cache-dir supervisor
 RUN pip3 install --no-cache-dir -r /home/requirements.txt
 RUN pip3 install --no-cache-dir uwsgi
 
-RUN apt purge -y python3-dev \
-		 python-dev \
-		 gcc \
+RUN apt purge -y gcc \
                  make
 
 RUN apt autoremove -y

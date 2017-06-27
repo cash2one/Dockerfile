@@ -3,6 +3,7 @@ apscheduler
 pymongo
 logbook
 flask-apscheduler
+flask-sqlalchemy
 raven
 flask_cors
 suds-jurko

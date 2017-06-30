@@ -28,3 +28,4 @@ redis
 hiredis
 aiohttp
 transitions
+flask-sqlalchemy

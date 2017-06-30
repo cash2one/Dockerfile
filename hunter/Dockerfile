@@ -8,7 +8,7 @@ RUN apt install -y gcc make
 
 ENV LANG C.UTF-8
 # RUN apt install -y language-pack-zh-hans-base
-# ADD Shanghai /etc/localtime
+ADD Shanghai /etc/localtime
 # RUN locale-gen en_US.UTF-8  
 # ENV LANG en_US.UTF-8
 # ENV LC_ALL en_US.UTF-8

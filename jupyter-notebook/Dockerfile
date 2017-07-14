@@ -33,7 +33,8 @@ RUN cd ..
 RUN rm -rf ta-lib
 
 WORKDIR /
-RUN pip3 install --no-cache-dir -r requirements3.txt
+RUN pip3 install --no-cache-dir -r requirements3.txt -i http://nexus.daocloud.io/repository/daocloud-pypi/simple --trusted-host nexus.daocloud.io
+
 RUN jupyter contrib nbextension install --user
 
 RUN rm -rf /var/lib/apt/lists/*

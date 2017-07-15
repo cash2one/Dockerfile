@@ -9,6 +9,8 @@ TA-Lib
 tensorflow
 yapf
 alphalens
+scikit-learn
+hmmlearn
 
 pymc3
 celery

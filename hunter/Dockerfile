@@ -8,7 +8,6 @@ RUN apt install -y gcc make
 
 ENV LANG C.UTF-8
 # RUN apt install -y language-pack-zh-hans-base
-ADD Shanghai /etc/localtime
 # RUN locale-gen en_US.UTF-8  
 # ENV LANG en_US.UTF-8
 # ENV LC_ALL en_US.UTF-8
@@ -31,7 +30,12 @@ RUN rm -rf /ta-lib
 
 RUN apt install -y python3-dev \
                    python3-pip \
-                   python-pip
+                   python-pip \
+                   tzdata
+
+# change timezone
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+    echo "Asia/Shanghai" > /etc/timezone
 
 RUN pip install --no-cache-dir supervisor
 

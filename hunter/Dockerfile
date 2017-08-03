@@ -4,9 +4,15 @@ MAINTAINER zhoujunqian <zjqzero@gmail.com>
 
 
 RUN apt update
-RUN apt install -y gcc make
+RUN apt install -y gcc \
+		   make \
+		   python3-dev \
+                   python3-pip \
+                   python-pip \
+                   tzdata
 
 ENV LANG C.UTF-8
+
 # RUN apt install -y language-pack-zh-hans-base
 # RUN locale-gen en_US.UTF-8  
 # ENV LANG en_US.UTF-8
@@ -28,11 +34,6 @@ RUN make install
 RUN cd ..
 RUN rm -rf /ta-lib
 
-RUN apt install -y python3-dev \
-                   python3-pip \
-                   python-pip \
-                   tzdata
-
 # change timezone
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
     echo "Asia/Shanghai" > /etc/timezone
@@ -43,7 +44,8 @@ RUN pip3 install --no-cache-dir -r /home/requirements.txt
 RUN pip3 install --no-cache-dir uwsgi
 
 RUN apt purge -y gcc \
-                 make
+                 make \
+                 python3-dev
 
 RUN apt autoremove -y
 

@@ -32,3 +32,6 @@ hiredis
 aiohttp
 transitions
 flask-sqlalchemy
+flask-restless
+frask-migrate
+flask-script

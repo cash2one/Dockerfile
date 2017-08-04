@@ -44,8 +44,7 @@ RUN pip3 install --no-cache-dir -r /home/requirements.txt
 RUN pip3 install --no-cache-dir uwsgi
 
 RUN apt purge -y gcc \
-                 make \
-                 python3-dev
+                 make 
 
 RUN apt autoremove -y
 

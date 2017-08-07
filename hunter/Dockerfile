@@ -40,8 +40,8 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
 
 RUN pip install --no-cache-dir supervisor
 
-RUN pip3 install --no-cache-dir -r /home/requirements.txt
-RUN pip3 install --no-cache-dir uwsgi
+RUN pip3 install --no-cache-dir -r /home/requirements.txt -i http://nexus.daocloud.io/repository/daocloud-pypi/simple  --trusted-host nexus.daocloud.io
+RUN pip3 install --no-cache-dir uwsgi -i http://nexus.daocloud.io/repository/daocloud-pypi/simple  --trusted-host nexus.daocloud.io
 
 RUN apt purge -y gcc \
                  make 
